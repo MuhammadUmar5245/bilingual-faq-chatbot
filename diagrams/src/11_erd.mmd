@@ -1,0 +1,50 @@
+erDiagram
+  CATEGORIES ||--o{ FAQS : "groups"
+  FAQS |o--o{ CONVERSATION_LOGS : "matched by"
+  CONVERSATION_LOGS ||--o{ FEEDBACK : "rated by"
+  CATEGORIES {
+    int id PK
+    varchar name_en UK
+    varchar name_ar
+  }
+  FAQS {
+    int id PK
+    text question_en
+    text question_ar
+    text answer
+    text answer_ar
+    varchar answer_lang
+    int category_id FK
+    text keywords
+    boolean is_active
+    timestamp created_at
+    timestamp updated_at
+  }
+  CONVERSATION_LOGS {
+    int id PK
+    varchar session_id
+    text query_text
+    varchar detected_lang
+    int matched_faq_id FK "nullable"
+    float confidence
+    varchar method "tfidf, sbert or fallback"
+    varchar category
+    float response_ms
+    timestamp created_at
+  }
+  FEEDBACK {
+    int id PK
+    int log_id FK
+    boolean helpful
+    timestamp created_at
+  }
+  ADMIN_USERS {
+    int id PK
+    varchar username UK
+    varchar password_hash "bcrypt"
+    timestamp last_login
+  }
+  SETTINGS {
+    varchar key PK
+    varchar value
+  }

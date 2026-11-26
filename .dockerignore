@@ -1,0 +1,13 @@
+.git
+.venv
+**/node_modules
+**/dist
+**/__pycache__
+**/*.pyc
+backend/instance
+backend/nlp/cache
+screenshots
+diagrams
+.env
+.server.log
+.pip_log.txt

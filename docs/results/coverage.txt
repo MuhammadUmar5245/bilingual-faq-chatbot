@@ -1,0 +1,25 @@
+---------- coverage: platform win32, python 3.10.0-final-0 -----------
+Name                     Stmts   Miss  Cover
+--------------------------------------------
+app\__init__.py             49      4    92%
+app\config.py               43      0   100%
+app\extensions.py            7      0   100%
+app\nlp_service.py          43      2    95%
+app\privacy.py              18      0   100%
+app\seed.py                 63      4    94%
+models\__init__.py          83      0   100%
+nlp\__init__.py              0      0   100%
+nlp\classifier.py           43      4    91%
+nlp\hybrid.py               67      0   100%
+nlp\language.py             19      2    89%
+nlp\preprocess.py           61      0   100%
+nlp\sbert_retriever.py      59      7    88%
+nlp\tfidf_retriever.py      76      0   100%
+routes\__init__.py           0      0   100%
+routes\admin.py            303     17    94%
+routes\public.py           100      1    99%
+routes\site.py              24      2    92%
+--------------------------------------------
+TOTAL                     1058     43    96%
+
+151 passed in 65.85s (0:01:05)

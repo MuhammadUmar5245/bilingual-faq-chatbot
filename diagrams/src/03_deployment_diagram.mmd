@@ -1,0 +1,22 @@
+flowchart TB
+  subgraph client["device: Client (PC / phone)"]
+    B["Web browser<br/>college site + widget.js<br/>admin dashboard"]
+  end
+  subgraph host["device: Server running Docker Engine 20.10+ (docker compose)"]
+    subgraph web["container: web (nginx:1.27-alpine)"]
+      NG["Nginx - published port 8088<br/>/ demo site, /widget.js,<br/>/admin/ SPA, /api/ proxy"]
+    end
+    subgraph api["container: api (python:3.10-slim)"]
+      GU["gunicorn: 6 workers x 4 threads<br/>Flask app + NLP engine"]
+      MD[("SBERT model<br/>baked into image")]
+    end
+    subgraph db["container: db (postgres:14-alpine)"]
+      PG[("PostgreSQL 14<br/>database faqbot")]
+    end
+    VOL[("volume: pgdata")]
+  end
+  B -- "HTTP :8088" --> NG
+  NG -- "HTTP :5000 (internal network)" --> GU
+  GU -- "TCP :5432 (psycopg2)" --> PG
+  GU --- MD
+  PG --- VOL

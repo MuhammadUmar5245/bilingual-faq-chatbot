@@ -1,0 +1,16 @@
+flowchart TB
+  Q["User query<br/>كيف أدفع الرسوم؟"] --> LD["1 Language detection<br/>script ratio + langdetect"]
+  LD --> N["2 Normalisation<br/>remove diacritics, tatweel<br/>unify alef, yaa, taa marbuta"]
+  N --> TK["3 Tokenisation + stop-words<br/>NLTK English / Arabic list<br/>synonym glossary"]
+  TK --> ST["4 Stemming<br/>Snowball (EN)<br/>light prefix/suffix (AR)"]
+  ST --> TF["5 TF-IDF vector<br/>word 1-2-grams (0.6)<br/>+ char 3-5-grams (0.4)"]
+  TF --> CS1{"cosine >= 0.75?"}
+  CS1 -- yes --> OUT1["Answer (tfidf)"]
+  CS1 -- no --> SB["6 SBERT embedding<br/>paraphrase-multilingual-<br/>MiniLM-L12-v2 (384-d)"]
+  SB --> FU["7 Score fusion<br/>0.6 TF-IDF + 0.4 SBERT"]
+  FU --> CS2{"fused >= 0.35?"}
+  CS2 -- yes --> OUT2["Answer (sbert)"]
+  CS2 -- no --> OUT3["Fallback + contacts (FR-05)"]
+  OUT3 --> CLS["Category classifier<br/>TF-IDF + linear SVM"]
+  KB[("FAQ index<br/>EN + AR document per FAQ<br/>cached embeddings")] -.-> TF
+  KB -.-> SB

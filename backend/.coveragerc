@@ -1,0 +1,6 @@
+[run]
+omit =
+    nlp/evaluate.py
+    nlp/rebuild_timing.py
+    nlp/check_keyword_leakage.py
+    tests/*

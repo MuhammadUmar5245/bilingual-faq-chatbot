@@ -1,0 +1,22 @@
+flowchart TB
+  subgraph internet["Internet / campus network"]
+    ST["Students' phones and laptops"]
+    CS["College website<br/>(any host)"]
+  end
+  subgraph lan["College staff LAN"]
+    AD["Staff PCs<br/>(admin dashboard)"]
+  end
+  FW{{"Firewall / router<br/>only web port open"}}
+  subgraph dmz["Server (Docker host)"]
+    subgraph net["Docker bridge network (private)"]
+      WEB["web (Nginx)<br/>published :8088"]
+      API["api (Flask)<br/>:5000 not published"]
+      DB[("db (PostgreSQL)<br/>:5432 not published")]
+    end
+  end
+  ST -- "HTTP(S)" --> FW
+  CS -. "loads /widget.js" .-> FW
+  AD -- "HTTP(S)" --> FW
+  FW --> WEB
+  WEB -- "/api/*" --> API
+  API --> DB

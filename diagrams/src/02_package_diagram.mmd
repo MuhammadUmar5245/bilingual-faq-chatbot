@@ -1,0 +1,56 @@
+flowchart TB
+  subgraph backend["package: backend (Python / Flask)"]
+    direction TB
+    subgraph app["package: app"]
+      app1["__init__ (create_app)"]
+      app2["config"]
+      app3["extensions"]
+      app4["seed"]
+      app5["nlp_service"]
+    end
+    subgraph routes["package: routes"]
+      r1["public"]
+      r2["admin"]
+      r3["site"]
+    end
+    subgraph models["package: models"]
+      m1["Category, FAQ, ConversationLog,<br/>Feedback, AdminUser, Setting"]
+    end
+    subgraph nlp["package: nlp"]
+      n1["language"]
+      n2["preprocess"]
+      n3["tfidf_retriever"]
+      n4["sbert_retriever"]
+      n5["classifier"]
+      n6["hybrid"]
+      n7["evaluate"]
+    end
+    subgraph tests["package: tests"]
+      t1["unit + integration (pytest)"]
+      t2["blackbox"]
+      t3["perf"]
+    end
+  end
+  subgraph frontend["package: frontend (React 18 + Vite)"]
+    subgraph widget["package: widget"]
+      w1["embed.jsx"]
+      w2["Widget.jsx"]
+      w3["api.js / i18n.js"]
+    end
+    subgraph admin["package: admin"]
+      a1["App.jsx"]
+      a2["pages/*"]
+      a3["components/*"]
+    end
+  end
+  data["package: data<br/>faqs_seed.csv, test_queries.csv"]
+  routes --> app
+  routes --> models
+  app --> nlp
+  app --> models
+  widget -. "REST /api" .-> routes
+  admin -. "REST /api/admin" .-> routes
+  app --> data
+  nlp --> data
+  tests --> routes
+  tests --> nlp

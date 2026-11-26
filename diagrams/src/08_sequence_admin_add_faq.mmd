@@ -1,0 +1,28 @@
+sequenceDiagram
+  autonumber
+  actor A as Admin staff
+  participant D as Admin dashboard (React)
+  participant API as Flask /api/admin
+  participant DB as PostgreSQL
+  participant E as HybridRetriever (each worker)
+  A->>D: Log in (username, password)
+  D->>API: POST /api/admin/login
+  API->>DB: SELECT admin_users
+  API->>API: bcrypt.checkpw
+  API-->>D: 200 + session cookie
+  A->>D: Click Add FAQ, fill EN/AR question and answer, category, keywords
+  D->>API: POST /api/admin/faqs (JSON)
+  API->>API: login_required, validate fields
+  alt invalid
+    API-->>D: 400 {error}
+    D-->>A: Show error message
+  else valid
+    API->>DB: INSERT faqs
+    API->>DB: UPDATE settings faq_version + 1
+    API-->>D: 201 {faq}
+    D-->>A: Toast - FAQ added, chatbot index rebuilt
+  end
+  Note over E,DB: On the next student query
+  E->>DB: faq_version changed?
+  E->>DB: SELECT active faqs
+  E->>E: Rebuild TF-IDF index, classifier, SBERT embeddings (cached)

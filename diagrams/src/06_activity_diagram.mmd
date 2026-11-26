@@ -1,0 +1,22 @@
+flowchart TD
+  start(("start")) --> A["Student types a question"]
+  A --> V{"Valid?<br/>1-500 characters"}
+  V -- No --> E["Show validation message"] --> stop1(("end"))
+  V -- Yes --> L["Detect language (EN / AR)"]
+  L --> P["Preprocess<br/>normalise, stop-words, stemming"]
+  P --> T["TF-IDF cosine similarity<br/>against all active FAQs"]
+  T --> D1{"TF-IDF score >= 0.75?"}
+  D1 -- Yes --> R1["Best TF-IDF match<br/>method = tfidf"]
+  D1 -- No --> S["SBERT similarity<br/>fused = 0.6 TF-IDF + 0.4 SBERT"]
+  S --> D2{"fused score >= 0.35?"}
+  D2 -- Yes --> R2["Best fused match<br/>method = sbert"]
+  D2 -- No --> F["Fallback message + contact details<br/>+ 'Did you mean' suggestions<br/>method = fallback"]
+  R1 --> ANS["Answer in query language<br/>+ category + confidence"]
+  R2 --> ANS
+  F --> CL["Classify category (SVM)"]
+  CL --> LOG
+  ANS --> LOG["Log query: session, language, FAQ,<br/>confidence, method, response time"]
+  LOG --> SH["Display in widget,<br/>update last-5 history"]
+  SH --> FB{"Student rates<br/>the answer?"}
+  FB -- Yes --> SF["Store feedback"] --> stop2(("end"))
+  FB -- No --> stop2

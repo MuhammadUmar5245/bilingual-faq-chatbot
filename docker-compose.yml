@@ -1,0 +1,56 @@
+# One command: docker compose up --build   ->  http://localhost:8088  (admin: /admin/)
+services:
+  db:
+    image: postgres:14-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-faqbot}
+      POSTGRES_USER: ${POSTGRES_USER:-faq}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-faqpass}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-faq} -d ${POSTGRES_DB:-faqbot}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      DATABASE_URL: postgresql+psycopg2://${POSTGRES_USER:-faq}:${POSTGRES_PASSWORD:-faqpass}@db:5432/${POSTGRES_DB:-faqbot}
+      SECRET_KEY: ${SECRET_KEY:-change-me-in-production}
+      ADMIN_USERNAME: ${ADMIN_USERNAME:-admin}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-Admin@12345}
+      CONFIDENCE_THRESHOLD: ${CONFIDENCE_THRESHOLD:-0.75}
+      SBERT_THRESHOLD: ${SBERT_THRESHOLD:-0.35}
+      FUSION_WEIGHT: ${FUSION_WEIGHT:-0.6}
+      CHAT_RATE_LIMIT: ${CHAT_RATE_LIMIT:-60 per minute}
+      LOG_RETENTION_DAYS: ${LOG_RETENTION_DAYS:-365}
+      SERVE_FRONTEND: "0"
+      GUNICORN_WORKERS: ${GUNICORN_WORKERS:-6}
+      GUNICORN_THREADS: ${GUNICORN_THREADS:-4}
+      TORCH_THREADS: ${TORCH_THREADS:-2}
+      DATA_DIR: /app/data
+    depends_on:
+      db:
+        condition: service_healthy
+    expose:
+      - "5000"
+    restart: unless-stopped
+
+  web:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports:
+      - "${WEB_PORT:-8088}:80"
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  pgdata:

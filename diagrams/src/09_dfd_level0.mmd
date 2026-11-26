@@ -1,0 +1,8 @@
+flowchart LR
+  STU["Student /<br/>applicant"]
+  ADM["Admin staff"]
+  P0(("0<br/>FAQ Chatbot<br/>System"))
+  STU -- "question (EN/AR),<br/>feedback" --> P0
+  P0 -- "verified answer / fallback +<br/>contacts, suggestions, history" --> STU
+  ADM -- "credentials, FAQ changes,<br/>CSV files, settings" --> P0
+  P0 -- "statistics, logs, unanswered<br/>queries, CSV export" --> ADM

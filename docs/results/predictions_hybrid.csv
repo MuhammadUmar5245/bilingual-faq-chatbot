@@ -1,0 +1,362 @@
+query_id,query,lang,expected_faq_id,predicted_faq_id,method,correct,response_ms
+1,what do i need to get into a bachelors degree,en,1,1,sbert,1,211.1
+2,entry criteria for undergraduate study,en,1,1,sbert,1,32.9
+3,admision requirments for bachelor,en,1,1,sbert,1,27.1
+4,ما المطلوب للقبول في البكالوريوس,ar,1,1,sbert,1,19.6
+5,how can i submit an application to join the college,en,2,2,sbert,1,22.1
+6,where do i apply online,en,2,2,sbert,1,21.5
+7,كيف اقدم على الكلية,ar,2,2,sbert,1,18.5
+8,what percentage do i need in thanawiya amma,en,3,3,sbert,1,18.7
+9,lowest grade accepted in general diploma,en,3,3,sbert,1,18.2
+10,كم النسبة المطلوبة في الدبلوم العام,ar,3,3,sbert,1,14.4
+11,which papers should i upload with the application,en,4,4,sbert,1,16.2
+12,required documnts for applying,en,4,4,sbert,1,16.6
+13,ما هي المستندات المطلوبة للتقديم,ar,4,4,sbert,1,13.3
+14,when can i start applying for admission,en,5,5,sbert,1,16.1
+15,admission open date,en,5,5,sbert,1,18.0
+16,متى يفتح باب القبول,ar,5,5,sbert,1,14.0
+17,what is GFP,en,6,6,sbert,1,12.5
+18,explain the foundation year,en,6,6,sbert,1,13.7
+19,ايش هو البرنامج التأسيسي,ar,6,6,tfidf,1,1.1
+20,can i skip the foundation year,en,7,7,sbert,1,14.7
+21,exemption from foundation english,en,7,7,sbert,1,15.9
+22,هل استطيع تجاوز السنة التأسيسية,ar,7,6,sbert,0,15.2
+23,ielts band needed to go straight into degree,en,8,8,sbert,1,23.0
+24,كم درجة ايلتس المطلوبة,ar,8,8,sbert,1,13.5
+25,can foreigners study here,en,9,9,sbert,1,17.2
+26,admission for non omani students,en,9,9,sbert,1,25.7
+27,هل يمكن للطالب الأجنبي الدراسة في الكلية,ar,9,66,sbert,0,14.1
+28,apply via HEAC,en,10,10,sbert,1,15.8
+29,التقديم عن طريق مركز القبول الموحد,ar,10,10,tfidf,1,1.1
+30,do i have to take a placement exam,en,11,11,sbert,1,20.1
+31,هل يوجد امتحان تحديد مستوى,ar,11,11,sbert,1,14.0
+32,how to track my application,en,12,12,sbert,1,15.2
+33,كيف اعرف حالة طلبي,ar,12,12,sbert,1,13.6
+34,i want to move from another university to this college,en,13,13,sbert,1,15.3
+35,transfering from other college,en,13,13,sbert,1,15.4
+36,will my old credits be counted,en,14,14,sbert,1,16.5
+37,معادلة المواد من جامعة سابقة,ar,14,14,sbert,1,13.4
+38,do i pay anything to submit an application,en,15,4,sbert,0,19.0
+39,هل التقديم برسوم,ar,15,15,sbert,1,15.6
+40,my school taught in arabic will i need english classes,en,16,16,sbert,1,18.4
+41,requirements for MBA or masters admission,en,17,17,sbert,1,27.3
+42,شروط القبول في الماجستير,ar,17,17,sbert,1,13.6
+43,i am an employee can i still enrol,en,18,NONE,fallback,0,23.1
+44,night classes for workers,en,19,19,sbert,1,14.7
+45,هل توجد دراسة مسائية,ar,19,19,sbert,1,12.9
+46,how many days until i hear back about admission,en,20,22,sbert,0,16.7
+47,i got accepted what next,en,21,21,sbert,1,14.8
+48,حصلت على قبول ماذا افعل بعدها,ar,21,21,sbert,1,14.6
+49,postpone my admission offer to next term,en,22,22,sbert,1,16.9
+50,meaning of provisional acceptance,en,23,23,sbert,1,15.0
+51,my high school certificate is from india do i need equivalency,en,24,24,sbert,1,17.3
+52,معادلة الشهادة الأجنبية,ar,24,24,sbert,1,13.1
+53,grades needed for engineering admission,en,25,25,sbert,1,23.1
+54,شروط قبول الهندسة,ar,25,25,sbert,1,12.9
+55,requirements to study IT,en,26,26,sbert,1,19.1
+56,is a health check needed to join,en,27,NONE,fallback,0,15.9
+57,can i tour the campus,en,28,28,sbert,1,15.0
+58,admissions office phone number,en,29,29,sbert,1,16.4
+59,رقم مكتب القبول,ar,29,29,sbert,1,12.6
+60,am i too old to apply,en,30,2,sbert,0,17.1
+61,switch programme after getting accepted,en,31,31,sbert,1,17.0
+62,i have a diploma can i complete a bachelors,en,32,140,sbert,0,19.4
+63,is toefl accepted,en,33,NONE,fallback,0,15.8
+64,how many times a year can new students join,en,34,209,sbert,0,15.1
+65,NOC from my company needed?,en,35,35,sbert,1,15.4
+66,how to enroll in courses for the semester,en,36,36,sbert,1,15.4
+67,steps for course registeration,en,36,36,sbert,1,19.3
+68,كيف اسجل المواد,ar,36,36,sbert,1,14.1
+69,when does registration open,en,37,37,sbert,1,16.6
+70,موعد تسجيل المقررات,ar,37,37,sbert,1,14.9
+71,add drop week,en,38,38,sbert,1,14.1
+72,متى فترة الحذف والاضافة,ar,38,38,tfidf,1,1.2
+73,i want to add another subject,en,39,39,sbert,1,16.4
+74,كيف اضيف مادة,ar,39,39,sbert,1,13.9
+75,remove a course from my schedule,en,40,40,sbert,1,15.8
+76,ابغى احذف مادة,ar,40,40,sbert,1,13.5
+77,max credits allowed in one semester,en,41,41,sbert,1,16.6
+78,كم الحد الاقصى للساعات,ar,41,41,sbert,1,14.1
+79,how many credits to be full time,en,42,42,sbert,1,16.5
+80,i missed the deadline to register,en,43,43,sbert,1,17.8
+81,late registeration fee,en,43,43,sbert,1,25.4
+82,how to withdraw from one subject,en,44,44,sbert,1,14.5
+83,الانسحاب من مقرر,ar,44,45,sbert,0,12.8
+84,quit the whole semester,en,45,45,sbert,1,17.0
+85,freeze my studies for a semester,en,46,46,sbert,1,18.9
+86,تأجيل الدراسة فصل,ar,46,46,sbert,1,13.4
+87,where do i get my university id,en,47,47,sbert,1,16.3
+88,استلام البطاقة الجامعية,ar,47,47,sbert,1,13.6
+89,where is my class schedule,en,48,48,sbert,1,14.2
+90,جدول المحاضرات,ar,48,48,sbert,1,12.5
+91,two lectures at the same time,en,49,165,sbert,0,14.6
+92,how to login to moodle,en,50,50,sbert,1,15.0
+93,الدخول الى بوابة الطالب,ar,50,50,sbert,1,13.0
+94,forgot my password,en,51,51,sbert,1,15.8
+95,نسيت الباسورد,ar,51,51,sbert,1,12.9
+96,what is a pre-requisite,en,52,52,sbert,1,14.9
+97,i want to change my major,en,53,53,sbert,1,18.2
+98,تغيير التخصص,ar,53,31,sbert,0,12.5
+99,how can i get my transcript,en,54,54,sbert,1,17.1
+100,طلب كشف الدرجات,ar,54,54,sbert,1,13.3
+101,letter proving i am a student,en,55,55,sbert,1,18.6
+102,رسالة لمن يهمه الامر,ar,55,55,sbert,1,13.9
+103,summer courses registration,en,56,56,sbert,1,21.8
+104,هل يوجد فصل صيفي,ar,56,56,sbert,1,13.7
+105,change my mobile number in the system,en,57,NONE,fallback,0,16.2
+106,there is a hold on my account,en,58,58,sbert,1,14.0
+107,how to come back after leaving college,en,59,NONE,fallback,0,16.1
+108,can i take 21 credits,en,60,60,sbert,1,18.1
+109,how do i find my advisor,en,61,61,sbert,1,15.3
+110,من هو المرشد الاكاديمي,ar,61,61,tfidf,1,1.1
+111,apply to graduate,en,62,62,sbert,1,16.3
+112,طلب التخرج,ar,62,62,sbert,1,13.0
+113,pick up my degree certificate,en,63,63,sbert,1,17.9
+114,attend a class without credit,en,64,64,sbert,1,14.1
+115,switch from morning to evening study,en,65,65,sbert,1,15.1
+116,take a class at another university,en,66,13,sbert,0,14.4
+117,where is my degree plan,en,67,67,sbert,1,16.4
+118,student email account,en,68,68,sbert,1,18.9
+119,الايميل الجامعي,ar,68,68,sbert,1,13.3
+120,i owe fees can i still register,en,69,69,sbert,1,26.7
+121,ministry attestation of my degree,en,70,70,sbert,1,14.9
+122,تصديق الشهادة,ar,70,70,sbert,1,13.4
+123,how much does a bachelors cost,en,71,71,sbert,1,17.0
+124,tution fees per year,en,71,101,sbert,0,18.5
+125,كم الرسوم الدراسية,ar,71,71,sbert,1,13.6
+126,foundation year fees,en,72,6,sbert,0,14.8
+127,رسوم السنة التأسيسية,ar,72,72,sbert,1,14.3
+128,payment methods for fees,en,73,73,sbert,1,18.4
+129,طرق دفع الرسوم,ar,73,73,sbert,1,12.5
+130,can i pay in installments,en,74,74,sbert,1,18.2
+131,تقسيط الرسوم,ar,74,74,sbert,1,13.5
+132,last day to pay tuition,en,75,73,sbert,0,15.8
+133,is there a fine for paying late,en,76,76,sbert,1,24.5
+134,غرامة التأخير في الدفع,ar,76,76,tfidf,1,1.4
+135,what financial aid is there,en,77,77,sbert,1,15.8
+136,المنح المتاحة,ar,77,77,sbert,1,13.4
+137,moheri scholarship application,en,78,78,sbert,1,15.1
+138,كيف احصل على بعثة حكومية,ar,78,78,sbert,1,14.2
+139,discount for excellent students,en,79,79,sbert,1,21.0
+140,my brother also studies here any discount,en,80,80,sbert,1,14.9
+141,خصم الاخوة,ar,80,80,sbert,1,14.0
+142,will i get my money back if i withdraw,en,81,81,sbert,1,16.9
+143,استرجاع الرسوم,ar,81,81,sbert,1,13.0
+144,are there any extra charges,en,82,82,sbert,1,15.4
+145,hostel price per semester,en,83,83,sbert,1,27.3
+146,كم سعر السكن,ar,83,83,sbert,1,14.2
+147,how much is the bus,en,84,84,sbert,1,14.3
+148,i need a payment receipt,en,85,85,sbert,1,20.6
+149,my employer will pay my fees,en,86,103,sbert,0,15.8
+150,my scholarship was stopped,en,87,87,sbert,1,14.4
+151,help for poor families,en,88,88,sbert,1,18.3
+152,دعم الطلبة من اسر الضمان الاجتماعي,ar,88,88,sbert,1,13.4
+153,cost of a resit,en,89,89,sbert,1,14.4
+154,fees for repeating a failed subject,en,90,90,sbert,1,16.4
+155,transcript cost,en,91,91,sbert,1,22.0
+156,pay by visa card online,en,92,92,sbert,1,15.7
+157,الدفع بالبطاقة الائتمانية,ar,92,92,sbert,1,13.4
+158,college iban number,en,93,NONE,fallback,0,17.6
+159,fees for foreign students,en,94,94,sbert,1,18.4
+160,do you charge vat,en,95,95,sbert,1,20.6
+161,does moheri pay for foundation,en,96,78,sbert,0,16.0
+162,monthly stipend for sponsored students,en,97,97,sbert,1,15.7
+163,المخصص الشهري للمبتعثين,ar,97,97,sbert,1,14.1
+164,financial clearance certificate,en,98,98,sbert,1,22.6
+165,براءة ذمة,ar,98,98,sbert,1,13.7
+166,unpaid fees will my results be blocked,en,99,99,sbert,1,16.0
+167,seat confirmation payment amount,en,100,100,sbert,1,16.6
+168,price per credit hour,en,101,101,sbert,1,17.9
+169,discount if i pay the whole year,en,102,102,sbert,1,18.8
+170,can my father pay my fees,en,103,103,sbert,1,20.9
+171,graduation gown fee,en,104,104,sbert,1,21.6
+172,finance department contact,en,105,105,sbert,1,27.2
+173,التواصل مع الدائرة المالية,ar,105,105,sbert,1,13.4
+174,list of majors available,en,106,106,sbert,1,18.4
+175,what degrees can i study,en,106,124,sbert,0,15.7
+176,ما هي التخصصات المتوفرة,ar,106,124,sbert,0,13.2
+177,do you have computer science,en,107,107,sbert,1,17.4
+178,هل يوجد تخصص علوم الحاسوب,ar,107,107,sbert,1,13.3
+179,engineering majors available,en,108,108,sbert,1,16.9
+180,تخصصات الهندسة,ar,108,108,sbert,1,12.5
+181,BBA programme,en,109,109,sbert,1,33.4
+182,تخصص ادارة الاعمال,ar,109,109,sbert,1,14.0
+183,is the college accredited,en,110,110,sbert,1,18.0
+184,هل الكلية معتمدة,ar,110,110,sbert,1,14.6
+185,are lectures in english or arabic,en,111,16,sbert,0,19.1
+186,لغة الدراسة,ar,111,111,sbert,1,21.9
+187,how many years is the degree,en,112,112,sbert,1,19.5
+188,مدة دراسة البكالوريوس,ar,112,112,sbert,1,17.0
+189,masters programs available,en,113,113,sbert,1,23.9
+190,how many classes can i miss,en,114,NONE,fallback,0,17.9
+191,نسبة الغياب المسموحة,ar,114,114,sbert,1,13.1
+192,how do you calculate gpa,en,115,115,sbert,1,21.5
+193,طريقة حساب المعدل,ar,115,115,sbert,1,13.2
+194,minimum cgpa to avoid problems,en,116,NONE,fallback,0,23.3
+195,what does being on probation mean,en,117,117,sbert,1,18.8
+196,الانذار الاكاديمي,ar,117,117,sbert,1,20.6
+197,is there OJT,en,118,118,sbert,1,18.6
+198,التدريب الميداني,ar,118,118,sbert,1,14.8
+199,graduation project,en,119,119,sbert,1,16.4
+200,مشروع التخرج,ar,119,119,tfidf,1,1.2
+201,two year diploma programmes,en,120,120,sbert,1,16.7
+202,is the degree from a uk university,en,121,121,sbert,1,15.1
+203,what happens if i copy an assignment,en,122,162,sbert,0,15.4
+204,سياسة الانتحال,ar,122,122,sbert,1,12.6
+205,total credits required for graduation,en,123,123,sbert,1,17.2
+206,can i do a minor,en,124,124,sbert,1,16.5
+207,optional subjects,en,125,125,sbert,1,15.9
+208,i need help with maths extra lessons,en,126,NONE,fallback,0,16.1
+209,دروس تقوية,ar,126,126,sbert,1,12.4
+210,what time do classes start,en,127,127,sbert,1,16.1
+211,اوقات الدوام,ar,127,127,sbert,1,13.3
+212,is study online,en,128,128,sbert,1,15.1
+213,semester start date,en,129,129,sbert,1,23.9
+214,متى يبدا الفصل الدراسي,ar,129,129,sbert,1,13.5
+215,graduate with distinction,en,130,130,sbert,1,14.9
+216,do you teach cybersecurity,en,131,131,sbert,1,16.5
+217,تخصص الذكاء الاصطناعي,ar,131,131,sbert,1,13.9
+218,graphic design course,en,132,132,sbert,1,15.4
+219,max years to finish my degree,en,133,133,sbert,1,15.6
+220,study abroad opportunity,en,134,134,sbert,1,15.1
+221,lecturer office hours,en,135,135,sbert,1,15.3
+222,compulsory university courses,en,136,136,sbert,1,17.0
+223,should i buy a laptop,en,137,137,sbert,1,15.5
+224,will employers accept this degree,en,138,86,sbert,0,16.1
+225,accounting degree,en,139,139,sbert,1,17.4
+226,what if i leave before finishing bachelor,en,140,140,sbert,1,15.1
+227,when are finals,en,141,141,sbert,1,14.4
+228,موعد الامتحانات النهائية,ar,141,141,tfidf,1,1.1
+229,exam schedule,en,142,142,sbert,1,15.7
+230,جدول الامتحانات,ar,142,142,sbert,1,13.2
+231,things to take to the exam,en,143,143,sbert,1,14.0
+232,i came late to my exam,en,144,144,sbert,1,23.5
+233,التأخر عن الامتحان,ar,144,144,sbert,1,15.7
+234,i was ill and missed the final,en,145,145,sbert,1,14.6
+235,غبت عن الامتحان بسبب المرض,ar,145,145,sbert,1,13.8
+236,how to submit mitigating circumstances,en,146,146,sbert,1,15.7
+237,what mark do i need to pass,en,147,147,sbert,1,19.6
+238,درجة النجاح,ar,147,147,sbert,1,20.1
+239,results release date,en,148,148,sbert,1,22.8
+240,متى تطلع النتائج,ar,148,148,sbert,1,13.5
+241,i want my exam remarked,en,149,149,sbert,1,16.2
+242,اعادة تصحيح الامتحان,ar,149,149,sbert,1,12.7
+243,what is a re-sit,en,150,150,sbert,1,13.9
+244,امتحان الاعادة,ar,150,89,sbert,0,12.8
+245,resit exam dates,en,151,151,sbert,1,24.5
+246,is the resit grade capped,en,152,152,sbert,1,14.9
+247,i failed the same course 2 times,en,153,90,sbert,0,15.8
+248,are phones allowed in exams,en,154,154,sbert,1,16.1
+249,هل يسمح بالجوال في الامتحان,ar,154,154,sbert,1,13.4
+250,calculator allowed in exam,en,155,155,sbert,1,15.7
+251,punishment for cheating,en,156,156,sbert,1,14.7
+252,عقوبة الغش,ar,156,156,sbert,1,13.8
+253,barred from final exam because of absence,en,157,157,sbert,1,15.9
+254,الحرمان من الامتحان,ar,157,157,sbert,1,13.0
+255,how much is coursework worth,en,158,71,sbert,0,14.2
+256,see my exam script,en,159,159,sbert,1,23.9
+257,grade scale A B C,en,160,160,sbert,1,23.1
+258,نظام الدرجات,ar,160,160,sbert,1,14.0
+259,where to upload assignments,en,161,161,sbert,1,14.2
+260,penalty for late assignment,en,162,162,sbert,1,16.0
+261,تسليم الواجب متاخر,ar,162,163,sbert,0,12.7
+262,need more time for my assignment,en,163,161,sbert,0,15.2
+263,midterm exams,en,164,164,sbert,1,17.3
+264,two finals at the same time,en,165,165,sbert,1,14.4
+265,extra time in exams for disabled students,en,166,166,sbert,1,18.2
+266,check my marks online,en,167,167,sbert,1,15.5
+267,what does grade I mean,en,168,168,sbert,1,16.4
+268,oral exam viva,en,169,169,sbert,1,17.8
+269,exam times in ramadan,en,170,170,sbert,1,20.6
+270,foundation exit test,en,171,171,sbert,1,15.9
+271,how is the graduation project graded,en,172,172,sbert,1,15.6
+272,retake a course to raise my grade,en,173,173,sbert,1,18.0
+273,تحسين المعدل باعادة المقرر,ar,173,173,sbert,1,13.6
+274,where do i sit in the exam,en,174,174,sbert,1,14.7
+275,exam postponed due to cyclone,en,175,175,sbert,1,19.8
+276,do you have student housing,en,176,176,sbert,1,22.0
+277,هل يوجد سكن للطلاب,ar,176,201,sbert,0,14.5
+278,is there hostal,en,176,NONE,fallback,0,15.4
+279,how to book a hostel room,en,177,177,sbert,1,16.0
+280,التقديم على السكن,ar,177,176,sbert,0,12.9
+281,is there transportation to college,en,178,178,sbert,1,14.5
+282,هل توجد باصات,ar,178,178,sbert,1,12.7
+283,bus timings,en,179,179,sbert,1,12.4
+284,مواعيد الحافلات,ar,179,179,sbert,1,12.9
+285,when does the library open,en,180,180,sbert,1,15.7
+286,دوام المكتبة,ar,180,180,sbert,1,13.1
+287,wifi password campus,en,181,181,sbert,1,15.2
+288,انترنت مجاني,ar,181,181,sbert,1,12.9
+289,i need someone to talk to about stress,en,182,NONE,fallback,0,17.9
+290,الارشاد النفسي,ar,182,182,sbert,1,13.2
+291,is there a doctor on campus,en,183,183,sbert,1,15.0
+292,العيادة,ar,183,183,sbert,1,12.7
+293,how to join a club,en,184,184,sbert,1,14.2
+294,الاندية الطلابية,ar,184,184,sbert,1,13.6
+295,help finding a job after graduation,en,185,185,sbert,1,18.4
+296,work part time in college,en,186,186,sbert,1,16.7
+297,where can i eat on campus,en,187,187,sbert,1,16.8
+298,الكافتيريا,ar,187,187,sbert,1,15.0
+299,car parking for students,en,188,188,sbert,1,21.8
+300,مواقف السيارات,ar,188,188,sbert,1,13.0
+301,support for disabled students,en,189,189,sbert,1,24.7
+302,i lost my wallet in college,en,190,190,sbert,1,16.0
+303,how to complain,en,191,191,sbert,1,13.4
+304,تقديم شكوى,ar,191,191,sbert,1,12.7
+305,IT support contact,en,192,192,sbert,1,19.6
+306,الدعم الفني,ar,192,192,sbert,1,12.4
+307,is there a gym,en,193,193,sbert,1,12.6
+308,student council elections,en,194,194,tfidf,1,10.9
+309,what should i wear to college,en,195,NONE,fallback,0,15.8
+310,اللبس في الكلية,ar,195,NONE,fallback,0,13.2
+311,where can i pray,en,196,196,sbert,1,15.1
+312,المصلى,ar,196,NONE,fallback,0,13.0
+313,printing services,en,197,197,sbert,1,18.3
+314,computer lab hours,en,198,198,sbert,1,19.1
+315,alumni association,en,199,199,sbert,1,16.5
+316,student visa help,en,200,200,sbert,1,18.6
+317,girls hostel,en,201,201,sbert,1,13.0
+318,medical insurance for students,en,202,202,sbert,1,20.4
+319,student services working hours,en,203,203,sbert,1,20.1
+320,emergency number on campus,en,204,204,sbert,1,15.8
+321,رقم الطوارئ,ar,204,204,sbert,1,13.3
+322,laptop loan from library,en,205,205,sbert,1,23.2
+323,when is graduation day,en,206,206,sbert,1,16.0
+324,حفل التخرج,ar,206,206,sbert,1,13.0
+325,volunteer opportunities,en,207,207,sbert,1,20.5
+326,help with writing essays,en,208,208,sbert,1,14.4
+327,induction week for freshers,en,209,209,sbert,1,15.0
+328,اسبوع التهيئة,ar,209,209,sbert,1,17.2
+329,locker rental,en,210,210,sbert,1,20.9
+330,what is the weather in muscat today,en,NONE,175,sbert,0,16.4
+331,who won the football match yesterday,en,NONE,NONE,fallback,1,15.7
+332,recommend a good restaurant in qurum,en,NONE,NONE,fallback,1,20.2
+333,how do i renew my driving licence,en,NONE,NONE,fallback,1,17.4
+334,what is the capital of france,en,NONE,NONE,fallback,1,15.9
+335,tell me a joke,en,NONE,NONE,fallback,1,15.3
+336,write python code to sort a list,en,NONE,NONE,fallback,1,17.3
+337,how much is a flight to dubai,en,NONE,NONE,fallback,1,18.0
+338,what is the exchange rate of omani rial to dollar,en,NONE,NONE,fallback,1,18.6
+339,best phone to buy this year,en,NONE,NONE,fallback,1,16.3
+340,how to cook majboos,en,NONE,NONE,fallback,1,19.5
+341,what movies are showing in the cinema,en,NONE,NONE,fallback,1,15.5
+342,who is the president of the united states,en,NONE,NONE,fallback,1,15.6
+343,how do i open a bank account,en,NONE,93,sbert,0,16.1
+344,translate hello to french,en,NONE,NONE,fallback,1,18.4
+345,what time is sunset,en,NONE,NONE,fallback,1,16.0
+346,hello how are you,en,NONE,NONE,fallback,1,17.5
+347,can you book me a taxi,en,NONE,NONE,fallback,1,17.3
+348,symptoms of flu,en,NONE,NONE,fallback,1,16.7
+349,ما هو الطقس اليوم في مسقط,ar,NONE,NONE,fallback,1,14.9
+350,من فاز في مباراة الأمس,ar,NONE,NONE,fallback,1,14.4
+351,اقترح علي مطعماً جيداً,ar,NONE,NONE,fallback,1,15.3
+352,كيف أجدد رخصة القيادة,ar,NONE,NONE,fallback,1,14.3
+353,ما هي عاصمة فرنسا,ar,NONE,NONE,fallback,1,13.5
+354,احكي لي نكتة,ar,NONE,NONE,fallback,1,15.1
+355,كم سعر تذكرة الطيران إلى دبي,ar,NONE,NONE,fallback,1,14.3
+356,كيف أطبخ المكبوس,ar,NONE,NONE,fallback,1,13.7
+357,ما هو سعر صرف الريال مقابل الدولار,ar,NONE,NONE,fallback,1,15.0
+358,أفضل هاتف للشراء,ar,NONE,154,sbert,0,13.3
+359,مرحبا كيف حالك,ar,NONE,NONE,fallback,1,14.0
+360,ما هي أعراض الإنفلونزا,ar,NONE,NONE,fallback,1,15.7
+361,متى موعد غروب الشمس,ar,NONE,151,sbert,0,13.2

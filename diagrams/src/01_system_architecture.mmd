@@ -1,0 +1,30 @@
+flowchart TB
+  subgraph Users
+    S["Student / applicant<br/>(browser or phone)"]
+    A["College staff<br/>(administrator)"]
+  end
+  subgraph Web["Web tier - Nginx container"]
+    H["College website<br/>(embeds widget)"]
+    W["Chat widget<br/>widget.js (React)"]
+    D["Admin dashboard<br/>(React SPA)"]
+  end
+  subgraph API["Application tier - Flask API container (gunicorn)"]
+    P["Public API<br/>/api/chat, /categories,<br/>/faqs/popular, /feedback"]
+    AD["Admin API<br/>/api/admin/* (Flask-Login)"]
+    N["NLP engine<br/>language detection, preprocessing,<br/>TF-IDF, SBERT fusion, fallback"]
+    C["Category classifier<br/>(6 categories)"]
+  end
+  subgraph Data["Data tier - PostgreSQL 14 container"]
+    KB[("FAQ knowledge base<br/>categories, faqs, settings,<br/>admin_users")]
+    LG[("Interaction data<br/>conversation_logs, feedback")]
+  end
+  S --> H --> W
+  A --> D
+  W -- "HTTP / JSON" --> P
+  D -- "HTTP / JSON + session cookie" --> AD
+  P --> N --> C
+  N -- "reads active FAQs" --> KB
+  P -- "logs every query" --> LG
+  AD -- "CRUD, import/export,<br/>settings" --> KB
+  AD -- "reads logs and stats" --> LG
+  AD -. "faq_version bump:<br/>index rebuild" .-> N

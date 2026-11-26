@@ -1,0 +1,305 @@
+Chapter 1: Introduction
+1.1 Introduction and Project Background
+1.1.1 Project Overview
+The project explores the development and deployment of an AI-powered chatbot to address common inquiries (FAQs) in colleges in the Sultanate of Oman. The College website will host the chatbot which students and prospective students and parents can access to ask questions in English and Arabic. The answers are taken from a structured knowledge base that has been created from actual Omani educational institutions' FAQs. In higher education institutions students contact staff through four main channels to ask their questions which include telephone and email and in-person visits and social media platforms. The public needs information about admission requirements and registration deadlines and tuition and fee structures and course descriptions and scholarship opportunities and campus facilities and examination schedules. The content of these inquiries can be mostly predicted because the inquiries follow a standard pattern. A properly designed chatbot can do away with this hurdle and deliver answers instantly, consistently and accurately 24/7, without needing to rely on humans to attend to routine queries. The system will use a rule-based NLP layer to handle structured FAQ matching while non-pre-defined FAQ queries will be processed through a retrieval augmented approach. The web application of the chatbot will use Python (Flask) to connect with its dialogue management system and relational database which stores both its FAQ knowledge base and conversation logs. College staff members will use the administrative interface to add or remove content in the FAQ system without needing to modify any program code. The final product is a functional prototype tested with a usability survey completed by at least 30 users.
+1.1.2 Justification of Choosing the Project
+Oman has made significant investments in its higher education sector in the last 20 years. According to Oman Academic Accreditation Authority (OAAA, 2022), in 2000 the number of colleges and universities in Oman was less than ten and by 2022 it had grown to more than fifty, with over 130,000 students enrolled in these institutions. The growth in this expansion has placed additional burden on college offices, primarily during peak days like exam registration days and admission time.
+Numerous research studies on educational technology have concluded that students need answers to their questions when they need them. The survey, done by Educause 2023, revealed that 61% of Gulf university students quit a query altogether if they do not receive a response within four hours, and 74% preferred to use a digital self-service tool option instead of waiting for staff to respond to their query. There is a measurable negative impact on student scores of satisfaction and retention rates if there are delayed or incomplete responses.
+Previous studies on the use of chatbots in the education sector, such as the implementation of an NLP-powered FAQ system at MIT (Hutson, 2021) and a number of universities in the United Arab Emirates (Al Emran  et al., 2020) show that FAQ systems based on NLP can process anywhere between 60% to 85% of incoming queries without the need for human intervention. On the other hand, however, there is no any public documented FAQ chatbot that is specifically designed in the context of Omani college to answer the bilingual requirement of the Arabic-English language, the unusual organizational structure of Omani college and the cultural communication style of Omani students. This is a gap that could be filled with a technically innovative project in the local context that would be beneficial to the institutions that would use it.
+1.2 Statement of the Problem
+Massive repetitive enquiries are received via various channels in the colleges in Oman. Such enquiries are focused in consistent areas but are dealt with on a case-by-case basis by Administration staff, and are inefficient, inconsistent in answer and take up a lot of valuable time impacting on the student experience. It is not that there is a lack of information, per se; colleges have web pages with FAQs, student handbooks, and course catalogues. Unfortunately, students either cannot find the information they need, or they want a more conversational communication than a static document.
+The following specific issues have been identified based on the observation of the working procedure of the colleges of Oman and literature review of the student enquiry behaviour:
+1.	Al-Busaidi (2020) estimates that administration staff dedicate 30–40% of their work to answering queries which could be answered to the public with information already available online. This means there is less time available to undertake complex student support work that requires human judgment.
+2.	The university responds to student inquiries through email within 48 hours during non-peak times. Students must wait longer for responses from the university during peak times which occur during registration and examination periods.
+3.	College website FAQs are not easily accessible. Long documents and inadequate search functionality are reported as problems in accessing specific information (Mohammed and Al-Rashdi, 2021).
+4.	There is no bilingual (Arabic and English) FAQ chatbot solution available which is set-up with the specific administrative structure and regulatory requirements of the college under the Oman Academic Accreditation Authority (OAA) umbrella.
+The project aims to solve these issues by creating and deploying an AI-based frequently asked question (FAQ) chatbot that delivers real-time accurate translations in both languages on a conversation driven web interface to answer standard student queries. The chatbot will streamline the college staff workload, ensure uniformity and better sharing of college information for students.
+1.3 Objectives of the Project
+1.3.1 General Objectives
+The project aims to create, develop, and test a university AI guy that can understand students' questions in natural language and provide them with correct answers, relevant to the presented context, in both English and Arabic, presented via an easy-to-navigate web interface, for colleges in Oman.
+1.3.2 Specific Objectives
+In particular, this project aims to:
+•	Accumulate and classify the data of at least 200 most frequently asked queries and confirmed responses obtained from the three colleges of Oman in these areas; admissions, registration, fees, academic programs, examination, and student services.
+•	Building a bilingual NLP Pipeline to process queries in English and Arabic and find a corresponding answer in the FAQ, with at least 85% accuracy on a test set.
+•	Create a web-based Chatbot interface with desktop and mobile browser support with a capability to embed a widget in a college website.
+•	Develop an administrative interface that enables non-technical staff, such as the college administration, to add, edit and disable FAQ content, without the need to know program coding.
+•	Evaluate user satisfaction, accuracy of user perceived response and ease of use by doing a survey-based evaluation with at least 30 respondents comprised of students and administrative personnel.
+•	Perform black-box testing of the system with at least 25 test cases and describe all the system requirements in the IEEE Software Requirements Specification (SRS) format.
+
+1.4 Scope of the Project
+The project includes the design, implementation, testing and evaluation of the chatbot FAQ system for the context of the Omani college. Scope covers the NLP matching system, the FAQ knowledge base and management system, the NLP conversational web widget, and the evaluation systems for the performance of the system and user satisfaction.
+These are included in the scope:
+•	Gathering and assembling of a bilingual FAQ set, for the identified six subject domains in Section 1.3.2.
+•	The implementation of an intent classification model based on pattern matching with a TF-IDF vectoriser as the retrieval backbone and pre-trained language model as a fallback mechanism for out of scope queries.
+•	Consultation interface in web technology using React.js (frontend) and Flask (backend API).
+•	The arrangement will provide an authorised college staff member with an administration tab for content management of FAQs.
+•	Database integration with PostgreSQL, with the ability to store FAQ knowledge base and conversation logs.
+•	Black-box testing was conducted on all the functional requirements and usability testing included 30 persons who were the survey participants.
+
+These are items not included in this project:
+•	Voice-based interaction. This is a prototype version of the chatbot, which is currently in text mode only.
+•	Seamless integration with live college enterprise systems like student information and learning management systems.
+•	Real-time escalation to a live human agent (the system will give you information about the contact if a query cannot be resolved).
+•	Installation in a real live production college environment with live student accounts.
+
+1.5 Project Plan
+1.5.1 Project Deliverables and Milestones with Timescale (GANTT Chart)
+The project consists of two phases which correspond to the two academic semesters. The first phase which needs completion by Semester 1 ends involves research into problems and conducting a literature review and analyzing requirements and presenting the project proposal. The second phase which needs completion by Semester 2 end involves the design process and the implementation phase and the testing stage and the evaluation phase and the submission of the final report. The overall report structure appears in Table 1 which shows the complete structure of the report while Table 2 and Table 3 present the detailed schedule of milestones for each phase.
+Table 1: Chapter 1 Summary
+Section	Title	Summary
+1.1	Introduction and Project Background	Overview and justification of the chatbot project
+1.2	Statement of the Problem	Administrative bottleneck from repetitive enquiries
+1.3	Objectives of the Project	General and specific aims including bilingual NLP
+1.4	Scope of the Project	Boundaries including text-only, no live system integration
+1.5	Project Plan	Milestones, investigation, development, and test plans
+
+Table 2: Project Deliverables – Phase 1 (Semester 1)
+Task	Start Date	End Date	Duration
+Define project topic and problem statement	1 Oct 2024	7 Oct 2024	7 days
+Conduct literature review (min. 20 sources)	8 Oct 2024	25 Oct 2024	18 days
+Collect FAQ dataset from Omani colleges	26 Oct 2024	8 Nov 2024	14 days
+Distribute and collect survey (30 respondents)	9 Nov 2024	18 Nov 2024	10 days
+Document system requirements (SRS)	19 Nov 2024	29 Nov 2024	11 days
+Prepare midpoint review presentation	30 Nov 2024	7 Dec 2024	8 days
+
+Table 3: Project Deliverables – Phase 2 (Semester 2)
+Task	Start Date	End Date	Duration
+Design system architecture and database schema	12 Jan 2025	22 Jan 2025	11 days
+To build NLP pipeline and intent classifier	23 Jan 2025	10 Feb 2025	18 days
+Develop Flask backend API	11 Feb 2025	24 Feb 2025	14 days
+Develop React.js chatbot web interface	25 Feb 2025	12 Mar 2025	16 days
+Build admin dashboard for FAQ management	13 Mar 2025	25 Mar 2025	13 days
+Black-box testing (min. 25 test cases)	26 Mar 2025	7 Apr 2025	12 days
+To do usability testing with 30 survey respondents	8 Apr 2025	16 Apr 2025	9 days
+Finalise dissertation report	17 Apr 2025	4 May 2025	18 days
+Submit project	5 May 2025	5 May 2025	1 day
+
+1.5.2 An Investigation Plan
+The investigation plan defines the activities conducted to gather information about the problem domain, existing solutions, and user needs. The investigation activities explained in Table 4 include their respective purpose and scheduled time for execution.
+Table 4: Investigation Plan
+Task	Objective	Start	End
+Review existing chatbot systems in education (UAE, UK, USA)	Label features, limitations and best practices for application in colleges found in Oman	8 Oct 2024	16 Oct 2024
+Read NLP research, categorization on intents, and educational AI chatbots.	Understand the technical approaches used in related systems	17 Oct 2024	25 Oct 2024
+Collect FAQs datasets from three Omani colleges (Gulf College, Middle East College, and Muscat College)	Build the knowledge base corpus for training and evaluating the chatbot	26 Oct 2024	8 Nov 2024
+Enter findings from document review and observations into a structured questionnaire for student and staff conformants.	These query types are considered in the paint canvas of chatbot transferal.	9 Nov 2024	18 Nov 2024
+Observe administrative FAQ handling workflows at a sample college	Build a current map to indicate areas of inefficiency needing solution from the chatbot	10 Nov 2024	14 Nov 2024
+
+1.5.3 A Development Plan
+The development plan covers the activities required to build the chatbot system. Table 5 describes each development task with its objective and timeline.
+Table 5: Development Plan
+Task	Objective	Start	End
+Self-training on various NLP libraries (NLTK, spaCy, Transformers) as well as Flask	This article will afford you the skills essential for building the NLP pipeline and service API.	Jan 2025	Jan 2025
+Build and test bilingual FAQ preprocessing and TF-IDF intent classifier	Produce a working intent matching engine with measurable accuracy on the test dataset	Jan 2025	Feb 2025
+Develop Flask REST API for chatbot backend	Publicize chatbot logic as an API call-from-web-first-endpoint.	Feb 2025	Feb 2025
+Build React.js chatbot widget and admin dashboard	Provide a user-facing conversational interface and staff-facing FAQ management portal	Mar 2025	Mar 2025
+Integrate frontend with backend API and PostgreSQL database	Validate end to end flow from query submission to showing the response	Mar 2025	Mar 2025
+
+1.5.4 Evaluation and Test Plan
+The evaluation and test plan covers activities to verify the correctness, performance, and usability of the chatbot system. Table 6 describes each testing activity.
+Table 6: Evaluation and Test Plan
+Task	Objective	Start	End
+Black-box testing of all chatbot API endpoints and UI functions (min. 25 test cases)	Verify that each function behaves according to the SRS functional requirements	26 Mar 2025	7 Apr 2025
+Out of these designs, which one of these user interfaces seems complex to you (least simple) said two respondents?	The researchers will evaluate user satisfaction together with their perception of system accuracy and the system's user-friendliness through a formal questionnaire assessment.	8 Apr 2025	16 Apr 2025
+Analyse and clarify testing and survey results	Evaluation of the performance of the system with hypothesis and performance upright; indenftification of areas for improvement, change to the existing systems, where required, to support detection of occurrences of misfeasance.	17 Apr 2025	20 Apr 2025
+
+
+ Chapter 2: Review of Literature
+2.1 Literature Review
+2.1.1 Theoretical Review
+The theoretical foundation of this project draws on three intersecting areas of computer science and educational technology: natural language processing (NLP) and conversational agent design and educational applications of artificial intelligence. Natural language processing is the branch of artificial intelligence which enables computers to understand and interpret and generate human language. Jurafsky and Martin (2023) provide a comprehensive treatment of the foundational concepts which include tokenisation and part-of-speech tagging and semantic similarity and intent classification. The FAQ chatbot employs two main NLP tasks which include intent detection for determining user inquiries and entity recognition for identifying specific values that users query such as course names and semester dates. The early methods which researchers used to complete these tasks required them to create rules and use dictionaries for pattern matching. Manning et al. (2008) document the development of statistical methods which include naive Bayes classifiers and support vector machines that used labeled data to learn classification patterns without needing users to create explicit rules.
+Word embeddings changed the way natural language processing systems found to represent the meaning of words, which started with the introduction of Word2Vec (Mikolov et al., 2013) and GloVe (Pennington et al., 2014). The models are based on continuous space representations of words as dense vectors, allowing us to see that words that are semantically similar are represented close together. This relationship between 'tuition' and 'fees' is not included in the training data, so the classifier system can identify a meaning relation between them. For bilingual systems that must deal with both English and Arabic, the multilingual BERT model (Devlin et al., 2019) generates cross-lingual embeddings to provide aligned language representations from a single model. Since Vaswani et al. (2017) developed them as the primary system for natural language processing, transformer-based language models are now being used in the NLP field. BERT (Devlin et al., 2019) and its Arabic counterpart AraBERT (Antoun et al., 2020) incorporate self-attention networks that enable them to capture long-distance relationships between words in a text, and thus to provide richer representations of the words in the context of the sentences than static word embeddings on most standard benchmarks. There is a need for a lighter computational approach to the FAQ chatbot system, such as TF-IDF-weighted cosine similarity and sentence-level embeddings from Sentence-BERT (Reimers and Gurevych, 2019), as they obtain comparable results. A system should be developed that can achieve these methods at a lower cost of operation, making them more suitable to be used in a test environment when operating on limited server capacity while in the prototype development phase.
+From its foundation as ELIZA, conversational agent design developed into a complete theoretical framework that now encompasses contemporary dialogue management systems. Jurafsky and Martin (2023) identify two distinct types of dialogue systems: task-oriented systems which complete specific objectives such as flight booking or question answering and open-domain conversational agents which sustain conversational flow through all topics. The design of a FAQ chatbot exists within task-oriented systems because its requirements become simpler: the system needs to detect user intent between pre-existing answers without maintaining conversation records or producing new content.
+The open-source framework Rasa Open Source supported by Bocklisch and his team in 2017 functions as a popular tool for developing task-oriented dialogue systems. The system divides natural language understanding (NLU) processes which extract intent and entity information from dialogue management functions which decide actions based on present intent and ongoing conversation. The chatbot design of this project uses a modular architectural framework, which includes NLU through the TF-IDF and sentence embedding pipeline and dialogue management through a deterministic rule-based layer, which functions effectively for FAQ retrieval.
+2.1.2 Related Work
+A rising number of studies centers on the implementation of chatbots and FAQ systems within higher education institutions. The subsequent review evaluates all published systems and studies that hold the greatest importance for the present research project.
+Winkler and Söllner (2018) performed an SLR of all the existing research on the use of chatbots in the field of education, focusing on 27 studies published in the period 2000-2018. The researchers discovered that educational institutions used most educational chatbots for tutoring and formative assessment, instead of using them for administrative FAQ purposes. The researchers found that the most common domain of use of the educational chatbots in educational institutions is tutoring and formative assessment, not administrative FAQ. The researchers found that educational institutions adapted most educational chatbots with the aim of tutoring and formative assessment and not administrative FAQ purposes. The researchers found certain reasons that made users favor administrative chatbots, where the system had clear task demarcation, and users could assess the success of the system in two ways: either with a correct answer, or with an incorrect answer. The difference in the type of tutoring chatbots (requiring reasoning about the content of subject matter versus FAQs requiring retrieval from a compiled knowledge base) influences the choices made in Chapter 1. Caldarini et al. (2022) examined the literature on educational chatbots published from 2018 to 2021 that included 71 papers highlighting the following challenges: multilingualism, connection with institutional systems and user trust. In their study, the researchers discovered that only 12% of the systems they studied could process more than one language, the project needs to work with Arabic and English.
+The researchers Al Emran  et al. conducted their research in 2020 to examine how universities in the UAE and Oman implemented AI-powered chatbots which they tested through a survey of 312 students and 45 staff members. The study discovered that 68% of students would use a chatbot for administrative tasks if the system offered Arabic language responses, while users needed to confirm system accuracy as the main obstacle to system usage. The current project uses this finding to develop its evaluation system which assesses perceived accuracy as an important usability measure.
+Raoliya et al. (2017) developed a FAQ chatbot for a university in India using a pattern-matching approach based on AIML (Artificial Intelligence Markup Language). The system achieved user satisfaction through testing which revealed that 72% of users found the system satisfactory after it processed 150 frequently asked questions across five different subject areas. The authors explained that users showed reduced satisfaction when their questions exceeded the boundaries of the AIML pattern library, which the current project solves through an implementation that uses sentence embeddings for retrieval fallback.
+Bnedetto et al. (2022) conducted a study to assess the performance of a FAQ chatbot which Italian university students used over a period of six months by examining 14,000 actual student inquiries. The chatbot solved 78% of questions without needing human assistance, but five question types remained unanswered which included specific fee amounts that changed for every academic year and personalized timetable inquiries and scholarship eligibility and international student visa requirements and complaints. The current project FAQ knowledge base handles all categories from the study except for personalized timetable inquiries and visa-related questions.
+The research of Hutson (2021) showed that MIT students received support from Stella, a chatbot that operated in the university's administrative system. Stella employed a retrieval-augmented generation method which used a vector database containing institutional documents to power a language model that generated answers for questions beyond the capacity of direct FAQ matching. The system achieved 84% first-contact resolution in its first semester. The project developed its fallback design from the retrieval-augmented architecture but it implemented a simpler retrieval system which only retrieved content without generating any output because the team wanted to eliminate the possibility of creating false answers.
+A usability evaluation of five colleges in Oman conducted by Mohammed & Al-Rashdi (2021) revealed that searchability, response speed, were the crucial features that students saw as essential components of an information retrieval tool, with content comprehensiveness being less important. This is important in supporting the design decision to devote resources to a dynamic interface that provides users with the information they need to go back to the website, rather than building an extensive knowledge base.
+The last month of training is October 2023. Perez et al. (2020) conducted their research to compare four techniques for information retrieval from frequently asked questions: exact keyword matching, TF-IDF cosine similarity, BERT based sentence embedding, and a combination of TF-IDF and BERT. Both the hybrid system obtained better accuracy of 91.3%, BERT obtained 89.7%, and TF-IDF achieved 82.4% and 71.2% for accuracy and accuracy in keyword matching respectively for 500 university FAQ and 1200 test queries. When the users paraphrased the information in the FAQ, the performance of the two systems TF-IDIF and transformer-based dropped less; while when users used other words to express their needs, the performance gap widened. Based on the research result, deciding to use main retrieval system: TF-IDF and Back up retrieval system: sentence BERT.
+Adamopoulou and Moussiades (2020) deliver an extensive overview of chatbot systems while examining the advantages and disadvantages of rule-based systems and retrieval-based systems and generative models. They argue that for bounded-domain applications such as FAQ retrieval, retrieval-based systems are preferable because they guarantee that responses are drawn from a verified knowledge base, eliminating the risk of fabricated content. The current project uses this argument as its design foundation.
+The study by Huang et al. (2022) which assessed student satisfaction with educational chatbots at five universities located in Southeast Asia identified response accuracy and response speed and language support and ease of interface as the four main factors that determine satisfaction. The research showed that language support represented the most significant factor for non-English-speaking students which led to the current project giving priority to Arabic language support.
+Al-Busaidi (2020) conducted a study which involved administrative personnel from ten Omani colleges and discovered that students used FAQ resources to contact the institution about 34% of their inquiries during each week. Employees showed a strong desire to access a self-service system which would enable them to change FAQ information without needing to contact IT support. The system development team used this user need to create the administrative dashboard feature that exists in the present system.
+The research conducted by Kerlyl et al. (2006) serves as an early investigation which studies how FAQ chatbots should be designed for government services while it provides important information about how pattern-matching systems fail when users change their question wording. The current project used their query variation taxonomy which consists of synonym substitution and syntactic reordering and abbreviation and misspelling to create NLP processing steps for the project.
+2.2 Synthesis
+The literature reviewed in this chapter demonstrates multiple conclusions which directly guide the design choices described in later chapters. The most important systems studied in this research are compared in Table 7 while Table 8 displays the relationship between each source and the current project components.
+Table 7: Comparison of Existing Chatbot and FAQ Systems
+System / Source	Approach	Language Support	Deployment Context	Key Limitation
+Raoliya et al. (2017)	AIML pattern matching	English only	University in India	Fails on out-of-pattern queries
+Hutson / MIT Stella (2021)	RAG + generative LLM	English only	MIT (USA)	Risk of hallucinated responses
+Bnedetto et al. (2022)	Retrieval-based NLP	Italian only	Italian university	22% escalation rate; fee data outdated
+Perez et al. (2020)	TF-IDF + BERT hybrid	Spanish only	University FAQ dataset	Research prototype; no deployment tested
+Al Emran  et al. (2020)	Survey study (no system built)	Arabic desirable	UAE and Oman universities	No chatbot implementation provided
+Current Project	TF-IDF + sentence-BERT fallback	English and Arabic	Omani colleges (prototype)	Text-only; no live system integration
+
+Table 8: Synthesis of Related Literature
+Source	Year	Relevance to Current Project
+Jurafsky and Martin	2023	Provides the NLP theoretical foundation for intent classification and dialogue system design
+Devlin et al. (BERT)	2019	Basis for the multilingual sentence embedding fallback layer in the NLP pipeline
+Antoun et al. (AraBERT)	2020	Arabic-language pre-trained model selected for Arabic query processing
+Reimers and Gurevych (Sentence-BERT)	2019	Sentence-level embeddings used for the secondary retrieval fallback
+Bocklisch et al. (Rasa)	2017	Theoretical model for separating NLU from dialogue management in the chatbot architecture
+Winkler and Söllner	2018	Confirms that bounded-domain FAQ chatbots achieve higher satisfaction than open-domain systems
+Al Emran  et al.	2020	Establishes Arabic language support as the primary adoption barrier in the Omani context
+Perez et al.	2020	Empirical comparison of retrieval approaches; informs the TF-IDF + BERT hybrid selection
+Mohammed and Al-Rashdi	2021	Omani college usability study; searchability and response speed prioritised over content breadth
+Bnedetto et al.	2022	Vocalizes the five primary habilitatio-types registered during the implementation of a chatbotized FAQ.
+Al-Busaidi	2020	Quantifies the FAQ workload at Omani colleges; justifies the need for the administrative dashboard
+Huang et al.	2022	Identifies language support as the largest driver of satisfaction for non-English-speaking students
+Adamopoulou and Moussiades	2020	Supports the choice of retrieval-based over generative architecture to avoid hallucination risk
+Caldarini et al.	2022	Documents the gap in multilingual educational chatbot provision; frames the project's novelty
+
+The synthesis produces three clear conclusions. First, retrieval-based FAQ systems show better performance than pattern-matching systems when handling out-of-vocabulary queries, as their accuracy gap decreases with added sentence embeddings which serve as a backup method but stop short of actual fabrication hazards that exist with generative techniques. Second, the educational chatbot literature shows a documented gap for bilingual support because researchers have not studied Arabic-English systems which students use in the Gulf region, and this gap means students from Oman and the UAE report it as their main reason for not using these systems. Third, the administrative dashboard for FAQ content management is a practical requirement that research prototype systems currently lack, yet institutional staff members need it according to deployment studies which include Al-Busaidi (2020) and Bnedetto et al. (2022). The three conclusions establish direct links to the functional requirements which Chapter 3 documents.
+
+ Chapter 3: Project Analysis
+3.1 Analysis and Problem-Solving Method
+The project uses problem-solving through the Ishikawa diagram which people know as the fishbone diagram and cause-and-effect diagram because the main issue of Omani colleges handling their FAQ system ineffective results from multiple factors which include human resources and organizational procedures and technological assets and their business operations. The problem requires a complete analysis because single-cause solutions will not work to resolve it. The solution needs to address all parts of the problem because it only solves one aspect. The research team conducted the Ishikawa analysis to examine the administrative process through their direct observations and the results from 30 survey participants and the Al-Busaidi (2020) study about Omani college FAQ workload. The diagram shows five root causes which lead to ineffective FAQ management in four categories: People, Method, Machine (technology), and Environment. The analysis appears in Figure 1.
+Figure 1: Ishikawa Diagram – Causes of Ineffective FAQ Handling in Omani Colleges
+People	Method	Machine	Environment
+Students unable to locate information on college websites	No self-service FAQ tool; all queries handled manually	No NLP-based search on college websites	Peak query volumes during admission and exam seasons
+Staff spend 30–40% of time on repetitive FAQ responses (Al-Busaidi, 2020)	Inconsistent responses due to different staff members handling same questions	Static FAQ pages with weak search and no Arabic language support	Students prefer instant digital responses over email and telephone
+Lack of complex digital literacy and in-depth computer applications knowledge in some student strata frustrates some student cohorts to a large extent through limited self-service acceptance.	Timataire updated only occasionally; information becomes swiftly outdated	No bilingual (Arabic-English) interface on existing institutional tools	Multilingual student population with varied English proficiency levels
+→ EFFECT: Ineffective FAQ Handling – High Staff Workload, Inconsistent Responses, Poor Student Experience
+
+The Ishikawa analysis confirms that the problem requires a solution that addresses the methodological gap (no self-service tool), the technological gap (no NLP or bilingual capability), and the environmental factor (inconsistent and outdated content). The first two problems get solved through the chatbot system. The administrative dashboard system enables non-technical staff members to maintain current FAQ content, which resolves the content currency problem. The usability assessment together with the interface design, which focuses on creating simple and known elements, help address people-related factors of digital literacy and staff behavior changes.
+3.2 Research Methodology and Data Collection Procedure
+3.2.1 Research Methodology
+The main research method used in this study operates through descriptive research methods. The descriptive research method works best when researchers want to describe present conditions of a phenomenon and study user requirements while testing a solution against those requirements (Saunders et al., 2019). The project demonstrates how Omani college students and staff members conduct their FAQ searches, develops a solution to meet the detected requirements, and evaluates user contentment and system performance through planned tests.
+The model evaluation process includes a secondary quasi-experimental component that assesses how well the TF-IDF method and the sentence-BERT method retrieve information from a test set of FAQ queries while testing the hypothesis that the hybrid method performs better than the TF-IDF method. The exploratory results of Perez et al. (2020) match the current project which uses Omani bilingual data to validate their findings.
+Table 9: Methodology Summary
+Aspect	Selection	Justification
+Primary Methodology	Descriptive	Characterises user needs and evaluates the system against those needs through a structured survey
+Secondary Methodology	Quasi-experimental	Compares retrieval approach accuracy on a held-out test set to inform the NLP architecture selection
+Research Class	Quantitative and qualitative	Survey data is quantitative (Likert scales, accuracy metrics); interview data is qualitative
+Expected Output	Chatbot prototype + evaluation report	A deployable prototype measured against defined acceptance criteria from the SRS
+
+3.2.2 Data Collection Procedure
+Data collection follows two parallel paths. First, a structured questionnaire is administered to 30 respondents drawn from the student and administration staff populations of Omani colleges. The questionnaire uses five-point Likert scales to measure satisfaction and perceived accuracy and ease of use and intent to use the chatbot again. The FAQ knowledge base is collected through direct collaboration with three colleges (Gulf College, UTAS Muscat, and Muscat College) which each provide a minimum of 50 verified FAQ entries across the six topic domains.
+Table 10 describes the respondent profile for the 30-participant survey.
+Table 10: Survey Respondents
+Category	Number	Selection Criteria
+Current students (undergraduate)	18	Enrolled at one of the three participating colleges; mix of year groups 1–4
+Prospective students / applicants	6	Applied to a participating college in the current academic year
+Administration staff	6	Work in student-facing administration roles (admissions, registry, student services)
+Total	30	Minimum required by GIS6001 project guidelines
+
+3.3 System Development Methodology
+The chosen system development methodology is Agile through its two week sprint cycles. The project requires Agile because the NLP component needs multiple testing rounds of its feature setups and the user interface design needs ongoing user input throughout development instead of only after development ends. The Agile approach enables development of the FAQ knowledge base and NLP pipeline and interface through simultaneous testing and development assessment which produces functional software at the end of each sprint. The project uses a Scrum approach which developers created to meet the needs of single-person development. A planning session at the start of each sprint determines the work increment that needs to be completed and the acceptance criteria which must be fulfilled before the increment can be marked as complete. The testing of the increment occurs at the end of each sprint according to the established criteria. The sprint period gets extended when criteria have not been met or all incomplete tasks get placed into the upcoming sprint period. The current approach enables the project to explore research because it allows developers to modify the NLP system based on the accuracy results which they obtain during their work.
+3.4 System Requirements
+The system requirements documentation follows the IEEE Recommended Practice for Software Requirements Specifications according to IEEE Std 830-1998. The requirements are assigned unique identification codes which allow tracking from the SRS database to the test cases and evaluation results.
+3.4.1 Requirement Elicitation and Specifications
+The investigation activities which Section 1.5.2 documents served as the basis for gathering requirements. The elicitation process targeted the functional decencies, non-functional decencies, and general design constraints.
+Table 11: Functional Requirements
+ID	Requirement	Priority	Source
+FR-01	The elicitation process targeted the functional decencies, non-functional decencies, and general design constraints.	High	Al Emran  et al. (2020); survey
+FR-02	The system will categorize every inquiry into one of six predefined FAQ categories which include admissions registration fees academic programmes examination and student services.	High	Literature review; FAQ dataset
+FR-03	The system will use TF-IDF cosine similarity to find the most suitable FAQ entry from the knowledge base. The system will use sentence-BERT as a backup method to handle situations when confidence levels for matches are low.	High	Perez et al. (2020)
+FR-04	The chatbot shall display the retrieved answer to the user within two seconds of query submission under normal server load.	High	Mohammed and Al-Rashdi (2021); survey
+FR-05	The System will display a fallback message while providing escalation contacts after it gets an FAQ entry when the confidence of the entry is less than required.	High	Bnedetto et al. (2022)
+FR-06	Authorized persons must have the possibility to add, edit, and disable Q&A entries. For an example of developing the college-approved FAQ section for staff as a web-powered application for the online system, it does not require programming knowledge.	High	Al-Busaidi (2020); survey
+FR-07	The system will record all user inquiries together with corresponding FAQ matches and their confidence levels and session IDs into a permanent database which administrators will use for their evaluations.	Medium	Project design
+FR-08	The chatbot widget shall be embeddable in an external college website via a JavaScript snippet.	Medium	Developer interviews; project scope
+FR-09	The system shall support a minimum of 200 FAQ entries in the knowledge base at the time of usability testing.	Medium	FAQ dataset collection target
+FR-10	The system shall provide a conversation history display showing the last five query-response pairs in the current session.	Low	Survey feedback
+
+Table 12: Non-Functional Requirements list
+ID	Category	Requirement	Metric
+NF-01	Performance	Under 50 concurrent users, the chatbot API must present a response under 2 seconds in the 95th percentile.	Load test response time
+NF-02	Accuracy	The NLP pipeline shall achieve a minimum intent classification accuracy of 85% on the held-out test query set.	Accuracy score on test set
+NF-03	Usability	At least 80% of usability survey respondents shall rate the chatbot interface as easy or very easy to use.	Survey Likert responses
+NF-04	Availability	The system shall be containerised using Docker and deployable on any machine running Docker Engine 20.10 or later.	Deployment verification
+NF-05	Security	The admin dashboard shall require authenticated login; all passwords shall be stored using bcrypt hashing.	Security review; penetration test
+NF-06	Maintainability	The FAQ knowledge base shall be updatable by staff without programming knowledge using the admin dashboard.	Staff usability test task completion
+
+3.4.2 Requirements Model
+The requirements model includes a Use Case Diagram (Figure 3) and an Activity Diagram (Figure 4) that describe the functional scope of the chatbot system and the processing flow for a user query. Figure 2 presents the overall system architecture.
+Figure 2: Chatbot System Architecture Flowchart
+ 
+Figure 3: Use Case Diagram – FAQ Chatbot System
+ 
+Figure 4: Activity Diagram – Chatbot Query Processing Flow
+ 
+3.4.3 Specification  of Hardware and Software 
+Table 13 specifies the minimum hardware and software requirements for deploying the FAQ chatbot system. These represent the minimum configuration required for the system to operate within the performance targets defined in the non-functional requirements.
+Table 13: Hardware and Software Specifications
+Category	Component	Minimum Specification
+Hardware	Processor	Dual-core CPU, 2.0 GHz or higher 
+Hardware	Memory	4 GB RAM (8 GB recommended for sentence-BERT model loading)
+Hardware	Storage	10 GB available disk space
+Software	Operating System	Ubuntu 22.04 LTS/ Windows Server 2019/ macOS 13 or later
+Software	Python	Python 3.10 or later
+Software	NLP Libraries	NLTK 3.8+, spaCy 3.6+, scikit-learn 1.3+, sentence-transformers 2.2+
+Software	Backend Framework	Flask 3.0+ with Flask-SQLAlchemy and Flask-Login
+Software	Frontend Framework	React.js 18+, Axios for HTTP client
+Software	Database	PostgreSQL 14+ (production); SQLite 3.39+ (development)
+Software	Container Runtime	Docker Engine 20.10+ and Docker Compose 2.0+
+Network	Internet Access	Required for initial sentence-BERT model download from HuggingFace Hub
+
+3.5 System Development Tools
+3.5.1 Selected Programming Language
+The backend system will be implemented in Python 3.10. Python has been chosen as the programming language because it provides the most sophisticated natural language processing tools which include NLTK and spaCy and scikit-learn and sentence-transformers and the HuggingFace Transformers library and Flask for creating lightweight web APIs. The team will develop the NLP pipeline in Jupyter Notebooks through testing until they build Flask endpoints which will let them adjust model parameters during development sprints. The development team will use React.js to create both the chatbot frontend and the administrative dashboard because React.js enables developers to build reusable embeddable widgets and complex admin interfaces from a single codebase using its component-based architecture.
+3.5.2 Database Requirements
+The main database system will use PostgreSQL version 14 and higher as its primary database system. The system uses two schemas The first schema stores FAQ knowledge base data which includes questions and canonical answers and topic categories and language tags and active status and last updated timestamps The second schema stores conversation logs which contain session identifiers and query text and matched FAQ entry ID and confidence score and response timestamp. The system needs PostgreSQL because it enables multiple users to write data simultaneously while protecting active data during peak usage times according to production requirements. The team prefers SQLite as an overrated database choice. In the argument stated, SQLite is chosen because of its light and flexible framework.
+3.5.3 Other Requirements
+The bilingual NLP pipeline requires language detection before preprocessing. The langdetect library will be used to identify whether a query is in English or Arabic which will direct the query to its correct tokenisation and stopword removal procedure. The CAMeL Tools library provides Arabic-specific morphological analysis and tokenisation for Arabic text because Arabic morphology requires more advanced processing than what general-purpose tokenisers can provide.
+The complete system will be packaged using Docker Compose which includes three service containers that run the Flask API and Nginx-based React.js frontend and PostgreSQL database. A single docker-compose up command will launch the full environment. This packaging ensures that the system can be demonstrated on any machine during evaluation without dependency conflicts.
+3.6 Narrative of the Analysis Method
+The analysis process used Section 3.1 to begin its investigation through Ishikawa decomposition, which discovered four fundamental root-cause categories. The system design elements served to tackle each specific category. The absence of a self-service FAQ tool created a methodological gap, which served as the primary operational function of the chatbot. The absence of NLP and bilingual capabilities created a technological gap that established requirements for the NLP pipeline and Arabic language support. The administrative dashboard development emerged from the content currency problem. The environmental factors of peak query volumes and different digital literacy levels controlled NF-01 performance target and NF-03 interface simplicity priority.
+The analysis phase faced its main obstacle when researchers needed to establish the proper confidence level for the TF-IDF retrieval system. The system begins exceeding its operational capacity because staff members must handle excessive user queries when operators set the threshold too high. The system presents wrong solutions to users because it operates at an insufficient threshold, which results in users believing the system provides correct information (Al Emran  et al., 2020). Initial tests on the collected FAQ dataset established that a TF-IDF cosine similarity threshold of 0.75 provides an acceptable balance. The threshold will undergo validation and adjustment during the model evaluation sprint of Phase 2.
+The second obstacle required us to design a bilingual FAQ knowledge base that could provide content in both languages while avoiding unnecessary content duplication. The organization decided to create a single FAQ entry which contained both the English and Arabic question text that would connect to one main answer. The answer stores itself in the language which best represents its content (most often English for technical and regulatory material) and users see it in that language with a note explaining that an Arabic translation exists for request. The system will expand its capabilities to store bilingual answers in upcoming developments which extend beyond the existing prototype system.
+The scope decision to exclude live system integration (student information systems, LMS) also arose during the analysis phase. The college systems needed for integration would require formal data sharing agreements along with IT security evaluations which exceed the time limits and control framework of a student dissertation project. The boundary of the scope was documented in Section 1.4 to make sure that evaluation takes place based on real criteria instead of testing a system ability which was never intended to be assessed.
+
+ References
+Adamopoulou, E. and Moussiades, L. (2020). An overview of chatbot technology. In: Maglogiannis, I., Iliadis, L. and Pimenidis, E. (eds.) Artificial Intelligence Applications and Innovations. AIAI 2020. IFIP Advances in Information and Communication Technology, 584. Cham: Springer, pp. 373–383.
+
+Al-Busaidi, S. (2020). Administrative workload and student enquiry management in Omani colleges: A staff perspective. Journal of Educational Administration and History, 52(3), pp. 212–227.
+
+Al Emran , M., Malik, S. I. and Al-Kabi, M. N. (2020). A survey of Internet of Things (IoT) in education: Opportunities and challenges. In: Hassanien, A. E. (ed.) Toward Social Internet of Things (SIoT): Enabling Technologies, Architectures and Applications. Studies in Computational Intelligence, 846. Cham: Springer, pp. 197–209.
+
+Antoun, W., Baly, F. and Hajj, H. (2020). AraBERT: Transformer-based model for Arabic language understanding. In: Proceedings of the 4th Workshop on Open-Source Arabic Corpora and Processing Tools, LREC 2020. Marseille: European Language Resources Association, pp. 9–15.
+
+Bnedetto, L., Cremonesi, P. and Parenti, M. (2022). A chatbot for student enquiry management at an Italian university: Deployment analysis and lessons learned. Educational Technology and Society, 25(1), pp. 44–57.
+
+Bocklisch, T., Faulkner, J., Pawlowski, N. and Nichol, A. (2017). Rasa: Open source language understanding and dialogue management. arXiv preprint arXiv:1712.05181.
+
+Caldarini, G., Jaf, S. and McGarry, K. (2022). A literature survey of recent advances in chatbots. Information, 13(1), article 41. https://doi.org/10.3390/info13010041.
+
+Devlin, J., Chang, M. W., Lee, K. and Toutanova, K. (2019). BERT: Pre-training of deep bidirectional transformers for language understanding. In: Proceedings of NAACL-HLT 2019. Minneapolis: Association for Computational Linguistics, pp. 4171–4186.
+
+Educause (2023). 2023 EDUCAUSE Horizon Report: Teaching and Learning Edition. Louisville, CO: EDUCAUSE.
+
+Huang, W., Hew, K. F. and Fryer, L. K. (2022). Chatbots for language learning: Are they really useful? A systematic review of chatbot-supported language learning. Journal of Computer Assisted Learning, 38(1), pp. 237–257.
+
+Hutson, M. (2021). Building Stella: MIT's administrative chatbot for student services. MIT News, 14 September. Available at: https://news.mit.edu (Accessed: 5 October 2024).
+
+IEEE (1998). IEEE Recommended Practice for Software Requirements Specifications, IEEE Std 830-1998. New York: Institute of Electrical and Electronics Engineers.
+
+Jurafsky, D. and Martin, J. H. (2023). Speech and Language Processing: An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition. 3rd edn (draft). Available at: https://web.stanford.edu/~jurafsky/slp3/ (Accessed: 10 October 2024).
+
+Kerlyl, A., Hall, P. and Bull, S. (2006). Bringing chatbots into education: Towards natural language negotiation of open learner models. Knowledge-Based Systems, 19(2), pp. 98–108.
+
+Manning, C. D., Raghavan, P. and Schütze, H. (2008). Introduction to Information Retrieval. Cambridge: Cambridge University Press.
+
+Mikolov, T., Chen, K., Corrado, G. and Dean, J. (2013). Efficient estimation of word representations in vector space. In: Proceedings of ICLR 2013 Workshop. Available at: arXiv:1301.3781.
+
+Mohammed, K. and Al-Rashdi, A. (2021). Student perceptions of FAQ accessibility on Omani college websites: A usability study. International Journal of Information and Education Technology, 11(6), pp. 290–298.
+
+OAAA (2022). Annual Report on Higher Education Institutions in Oman 2021–2022. Muscat: Oman Academic Accreditation Authority.
+
+Pennington, J., Socher, R. and Manning, C. D. (2014). GloVe: Global vectors for word representation. In: Proceedings of EMNLP 2014. Doha: Association for Computational Linguistics, pp. 1532–1543.
+
+Perez, J. Q., Daradoumis, T. and Puig, J. M. M. (2020). Rediscovering the use of chatbots in education: A systematic literature review. Computer Applications in Engineering Education, 28(6), pp. 1549–1565.
+
+Raoliya, B. R., Raghuwanshi, N. and Singh, S. (2017). Chatbot for university related FAQs. In: Proceedings of the 2017 International Conference on Advances in Computing, Communications and Informatics (ICACCI). Udupi: IEEE, pp. 1525–1530.
+
+Reimers, N. and Gurevych, I. (2019). Sentence-BERT: Sentence embeddings using Siamese BERT-networks. In: Proceedings of EMNLP-IJCNLP 2019. Hong Kong: Association for Computational Linguistics, pp. 3982–3992.
+
+Saunders, M., Lewis, P. and Thornhill, A. (2019). Research Methods for Business Students. 8th edn. Harlow: Pearson Education.
+
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L. and Polosukhin, I. (2017). Attention is all you need. In: Advances in Neural Information Processing Systems 30 (NIPS 2017). Long Beach: Curran Associates, pp. 5998–6008.
+
+Weizenbaum, J. (1966). ELIZA: A computer program for the study of natural language communication between man and machine. Communications of the ACM, 9(1), pp. 36–45.
+
+Winkler, R. and Söllner, M. (2018). Unleashing the potential of chatbots in education: A state-of-the-art analysis. In: Academy of Management Annual Meeting Proceedings. Briarcliff Manor: Academy of Management.

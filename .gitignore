@@ -1,0 +1,33 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+.pip_log.txt
+
+# Env / local data
+.env
+backend/instance/
+*.db
+backend/nlp/cache/
+
+# Node
+node_modules/
+frontend/*/dist/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.server.log
+frontend/*/dist/
+docs/results/coverage_html/
+diagrams/.tools/
+docs/report_builder/node_modules/
+
+# report documents
+docs/*.docx
+*.zip

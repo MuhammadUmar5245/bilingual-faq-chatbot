@@ -1,0 +1,362 @@
+query_id,query,lang,expected_faq_id,expected_category,variation
+1,what do i need to get into a bachelors degree,en,1,Admissions,paraphrase
+2,entry criteria for undergraduate study,en,1,Admissions,synonym
+3,admision requirments for bachelor,en,1,Admissions,misspelling
+4,ما المطلوب للقبول في البكالوريوس,ar,1,Admissions,paraphrase
+5,how can i submit an application to join the college,en,2,Admissions,paraphrase
+6,where do i apply online,en,2,Admissions,paraphrase
+7,كيف اقدم على الكلية,ar,2,Admissions,colloquial
+8,what percentage do i need in thanawiya amma,en,3,Admissions,synonym
+9,lowest grade accepted in general diploma,en,3,Admissions,synonym
+10,كم النسبة المطلوبة في الدبلوم العام,ar,3,Admissions,paraphrase
+11,which papers should i upload with the application,en,4,Admissions,synonym
+12,required documnts for applying,en,4,Admissions,misspelling
+13,ما هي المستندات المطلوبة للتقديم,ar,4,Admissions,synonym
+14,when can i start applying for admission,en,5,Admissions,paraphrase
+15,admission open date,en,5,Admissions,keyword
+16,متى يفتح باب القبول,ar,5,Admissions,paraphrase
+17,what is GFP,en,6,Admissions,abbreviation
+18,explain the foundation year,en,6,Admissions,synonym
+19,ايش هو البرنامج التأسيسي,ar,6,Admissions,colloquial
+20,can i skip the foundation year,en,7,Admissions,paraphrase
+21,exemption from foundation english,en,7,Admissions,reorder
+22,هل استطيع تجاوز السنة التأسيسية,ar,7,Admissions,paraphrase
+23,ielts band needed to go straight into degree,en,8,Admissions,paraphrase
+24,كم درجة ايلتس المطلوبة,ar,8,Admissions,misspelling
+25,can foreigners study here,en,9,Admissions,synonym
+26,admission for non omani students,en,9,Admissions,paraphrase
+27,هل يمكن للطالب الأجنبي الدراسة في الكلية,ar,9,Admissions,synonym
+28,apply via HEAC,en,10,Admissions,abbreviation
+29,التقديم عن طريق مركز القبول الموحد,ar,10,Admissions,keyword
+30,do i have to take a placement exam,en,11,Admissions,synonym
+31,هل يوجد امتحان تحديد مستوى,ar,11,Admissions,synonym
+32,how to track my application,en,12,Admissions,synonym
+33,كيف اعرف حالة طلبي,ar,12,Admissions,paraphrase
+34,i want to move from another university to this college,en,13,Admissions,paraphrase
+35,transfering from other college,en,13,Admissions,misspelling
+36,will my old credits be counted,en,14,Admissions,paraphrase
+37,معادلة المواد من جامعة سابقة,ar,14,Admissions,paraphrase
+38,do i pay anything to submit an application,en,15,Admissions,paraphrase
+39,هل التقديم برسوم,ar,15,Admissions,paraphrase
+40,my school taught in arabic will i need english classes,en,16,Admissions,paraphrase
+41,requirements for MBA or masters admission,en,17,Admissions,abbreviation
+42,شروط القبول في الماجستير,ar,17,Admissions,keyword
+43,i am an employee can i still enrol,en,18,Admissions,paraphrase
+44,night classes for workers,en,19,Admissions,synonym
+45,هل توجد دراسة مسائية,ar,19,Admissions,paraphrase
+46,how many days until i hear back about admission,en,20,Admissions,paraphrase
+47,i got accepted what next,en,21,Admissions,paraphrase
+48,حصلت على قبول ماذا افعل بعدها,ar,21,Admissions,paraphrase
+49,postpone my admission offer to next term,en,22,Admissions,synonym
+50,meaning of provisional acceptance,en,23,Admissions,synonym
+51,my high school certificate is from india do i need equivalency,en,24,Admissions,paraphrase
+52,معادلة الشهادة الأجنبية,ar,24,Admissions,keyword
+53,grades needed for engineering admission,en,25,Admissions,reorder
+54,شروط قبول الهندسة,ar,25,Admissions,keyword
+55,requirements to study IT,en,26,Admissions,abbreviation
+56,is a health check needed to join,en,27,Admissions,synonym
+57,can i tour the campus,en,28,Admissions,paraphrase
+58,admissions office phone number,en,29,Admissions,keyword
+59,رقم مكتب القبول,ar,29,Admissions,keyword
+60,am i too old to apply,en,30,Admissions,paraphrase
+61,switch programme after getting accepted,en,31,Admissions,synonym
+62,i have a diploma can i complete a bachelors,en,32,Admissions,paraphrase
+63,is toefl accepted,en,33,Admissions,abbreviation
+64,how many times a year can new students join,en,34,Admissions,paraphrase
+65,NOC from my company needed?,en,35,Admissions,abbreviation
+66,how to enroll in courses for the semester,en,36,Registration,synonym
+67,steps for course registeration,en,36,Registration,misspelling
+68,كيف اسجل المواد,ar,36,Registration,colloquial
+69,when does registration open,en,37,Registration,paraphrase
+70,موعد تسجيل المقررات,ar,37,Registration,synonym
+71,add drop week,en,38,Registration,keyword
+72,متى فترة الحذف والاضافة,ar,38,Registration,paraphrase
+73,i want to add another subject,en,39,Registration,synonym
+74,كيف اضيف مادة,ar,39,Registration,colloquial
+75,remove a course from my schedule,en,40,Registration,synonym
+76,ابغى احذف مادة,ar,40,Registration,colloquial
+77,max credits allowed in one semester,en,41,Registration,abbreviation
+78,كم الحد الاقصى للساعات,ar,41,Registration,paraphrase
+79,how many credits to be full time,en,42,Registration,paraphrase
+80,i missed the deadline to register,en,43,Registration,reorder
+81,late registeration fee,en,43,Registration,misspelling
+82,how to withdraw from one subject,en,44,Registration,synonym
+83,الانسحاب من مقرر,ar,44,Registration,keyword
+84,quit the whole semester,en,45,Registration,synonym
+85,freeze my studies for a semester,en,46,Registration,synonym
+86,تأجيل الدراسة فصل,ar,46,Registration,keyword
+87,where do i get my university id,en,47,Registration,synonym
+88,استلام البطاقة الجامعية,ar,47,Registration,keyword
+89,where is my class schedule,en,48,Registration,synonym
+90,جدول المحاضرات,ar,48,Registration,keyword
+91,two lectures at the same time,en,49,Registration,paraphrase
+92,how to login to moodle,en,50,Registration,paraphrase
+93,الدخول الى بوابة الطالب,ar,50,Registration,keyword
+94,forgot my password,en,51,Registration,keyword
+95,نسيت الباسورد,ar,51,Registration,colloquial
+96,what is a pre-requisite,en,52,Registration,misspelling
+97,i want to change my major,en,53,Registration,paraphrase
+98,تغيير التخصص,ar,53,Registration,keyword
+99,how can i get my transcript,en,54,Registration,paraphrase
+100,طلب كشف الدرجات,ar,54,Registration,keyword
+101,letter proving i am a student,en,55,Registration,paraphrase
+102,رسالة لمن يهمه الامر,ar,55,Registration,keyword
+103,summer courses registration,en,56,Registration,reorder
+104,هل يوجد فصل صيفي,ar,56,Registration,paraphrase
+105,change my mobile number in the system,en,57,Registration,paraphrase
+106,there is a hold on my account,en,58,Registration,paraphrase
+107,how to come back after leaving college,en,59,Registration,paraphrase
+108,can i take 21 credits,en,60,Registration,paraphrase
+109,how do i find my advisor,en,61,Registration,paraphrase
+110,من هو المرشد الاكاديمي,ar,61,Registration,paraphrase
+111,apply to graduate,en,62,Registration,reorder
+112,طلب التخرج,ar,62,Registration,keyword
+113,pick up my degree certificate,en,63,Registration,synonym
+114,attend a class without credit,en,64,Registration,paraphrase
+115,switch from morning to evening study,en,65,Registration,synonym
+116,take a class at another university,en,66,Registration,paraphrase
+117,where is my degree plan,en,67,Registration,synonym
+118,student email account,en,68,Registration,keyword
+119,الايميل الجامعي,ar,68,Registration,colloquial
+120,i owe fees can i still register,en,69,Registration,paraphrase
+121,ministry attestation of my degree,en,70,Registration,synonym
+122,تصديق الشهادة,ar,70,Registration,keyword
+123,how much does a bachelors cost,en,71,Fees,paraphrase
+124,tution fees per year,en,71,Fees,misspelling
+125,كم الرسوم الدراسية,ar,71,Fees,paraphrase
+126,foundation year fees,en,72,Fees,synonym
+127,رسوم السنة التأسيسية,ar,72,Fees,synonym
+128,payment methods for fees,en,73,Fees,reorder
+129,طرق دفع الرسوم,ar,73,Fees,synonym
+130,can i pay in installments,en,74,Fees,misspelling
+131,تقسيط الرسوم,ar,74,Fees,keyword
+132,last day to pay tuition,en,75,Fees,synonym
+133,is there a fine for paying late,en,76,Fees,synonym
+134,غرامة التأخير في الدفع,ar,76,Fees,keyword
+135,what financial aid is there,en,77,Fees,synonym
+136,المنح المتاحة,ar,77,Fees,keyword
+137,moheri scholarship application,en,78,Fees,abbreviation
+138,كيف احصل على بعثة حكومية,ar,78,Fees,paraphrase
+139,discount for excellent students,en,79,Fees,synonym
+140,my brother also studies here any discount,en,80,Fees,paraphrase
+141,خصم الاخوة,ar,80,Fees,keyword
+142,will i get my money back if i withdraw,en,81,Fees,paraphrase
+143,استرجاع الرسوم,ar,81,Fees,synonym
+144,are there any extra charges,en,82,Fees,synonym
+145,hostel price per semester,en,83,Fees,synonym
+146,كم سعر السكن,ar,83,Fees,colloquial
+147,how much is the bus,en,84,Fees,paraphrase
+148,i need a payment receipt,en,85,Fees,paraphrase
+149,my employer will pay my fees,en,86,Fees,paraphrase
+150,my scholarship was stopped,en,87,Fees,synonym
+151,help for poor families,en,88,Fees,synonym
+152,دعم الطلبة من اسر الضمان الاجتماعي,ar,88,Fees,paraphrase
+153,cost of a resit,en,89,Fees,synonym
+154,fees for repeating a failed subject,en,90,Fees,paraphrase
+155,transcript cost,en,91,Fees,keyword
+156,pay by visa card online,en,92,Fees,synonym
+157,الدفع بالبطاقة الائتمانية,ar,92,Fees,keyword
+158,college iban number,en,93,Fees,keyword
+159,fees for foreign students,en,94,Fees,synonym
+160,do you charge vat,en,95,Fees,abbreviation
+161,does moheri pay for foundation,en,96,Fees,abbreviation
+162,monthly stipend for sponsored students,en,97,Fees,synonym
+163,المخصص الشهري للمبتعثين,ar,97,Fees,keyword
+164,financial clearance certificate,en,98,Fees,synonym
+165,براءة ذمة,ar,98,Fees,keyword
+166,unpaid fees will my results be blocked,en,99,Fees,paraphrase
+167,seat confirmation payment amount,en,100,Fees,reorder
+168,price per credit hour,en,101,Fees,synonym
+169,discount if i pay the whole year,en,102,Fees,paraphrase
+170,can my father pay my fees,en,103,Fees,paraphrase
+171,graduation gown fee,en,104,Fees,keyword
+172,finance department contact,en,105,Fees,synonym
+173,التواصل مع الدائرة المالية,ar,105,Fees,paraphrase
+174,list of majors available,en,106,Academic Programmes,synonym
+175,what degrees can i study,en,106,Academic Programmes,paraphrase
+176,ما هي التخصصات المتوفرة,ar,106,Academic Programmes,synonym
+177,do you have computer science,en,107,Academic Programmes,paraphrase
+178,هل يوجد تخصص علوم الحاسوب,ar,107,Academic Programmes,paraphrase
+179,engineering majors available,en,108,Academic Programmes,synonym
+180,تخصصات الهندسة,ar,108,Academic Programmes,keyword
+181,BBA programme,en,109,Academic Programmes,abbreviation
+182,تخصص ادارة الاعمال,ar,109,Academic Programmes,keyword
+183,is the college accredited,en,110,Academic Programmes,paraphrase
+184,هل الكلية معتمدة,ar,110,Academic Programmes,paraphrase
+185,are lectures in english or arabic,en,111,Academic Programmes,paraphrase
+186,لغة الدراسة,ar,111,Academic Programmes,synonym
+187,how many years is the degree,en,112,Academic Programmes,paraphrase
+188,مدة دراسة البكالوريوس,ar,112,Academic Programmes,keyword
+189,masters programs available,en,113,Academic Programmes,misspelling
+190,how many classes can i miss,en,114,Academic Programmes,paraphrase
+191,نسبة الغياب المسموحة,ar,114,Academic Programmes,paraphrase
+192,how do you calculate gpa,en,115,Academic Programmes,abbreviation
+193,طريقة حساب المعدل,ar,115,Academic Programmes,paraphrase
+194,minimum cgpa to avoid problems,en,116,Academic Programmes,abbreviation
+195,what does being on probation mean,en,117,Academic Programmes,paraphrase
+196,الانذار الاكاديمي,ar,117,Academic Programmes,keyword
+197,is there OJT,en,118,Academic Programmes,abbreviation
+198,التدريب الميداني,ar,118,Academic Programmes,keyword
+199,graduation project,en,119,Academic Programmes,synonym
+200,مشروع التخرج,ar,119,Academic Programmes,keyword
+201,two year diploma programmes,en,120,Academic Programmes,paraphrase
+202,is the degree from a uk university,en,121,Academic Programmes,paraphrase
+203,what happens if i copy an assignment,en,122,Academic Programmes,paraphrase
+204,سياسة الانتحال,ar,122,Academic Programmes,keyword
+205,total credits required for graduation,en,123,Academic Programmes,synonym
+206,can i do a minor,en,124,Academic Programmes,paraphrase
+207,optional subjects,en,125,Academic Programmes,synonym
+208,i need help with maths extra lessons,en,126,Academic Programmes,paraphrase
+209,دروس تقوية,ar,126,Academic Programmes,keyword
+210,what time do classes start,en,127,Academic Programmes,paraphrase
+211,اوقات الدوام,ar,127,Academic Programmes,colloquial
+212,is study online,en,128,Academic Programmes,paraphrase
+213,semester start date,en,129,Academic Programmes,keyword
+214,متى يبدا الفصل الدراسي,ar,129,Academic Programmes,paraphrase
+215,graduate with distinction,en,130,Academic Programmes,synonym
+216,do you teach cybersecurity,en,131,Academic Programmes,paraphrase
+217,تخصص الذكاء الاصطناعي,ar,131,Academic Programmes,keyword
+218,graphic design course,en,132,Academic Programmes,synonym
+219,max years to finish my degree,en,133,Academic Programmes,abbreviation
+220,study abroad opportunity,en,134,Academic Programmes,synonym
+221,lecturer office hours,en,135,Academic Programmes,keyword
+222,compulsory university courses,en,136,Academic Programmes,synonym
+223,should i buy a laptop,en,137,Academic Programmes,paraphrase
+224,will employers accept this degree,en,138,Academic Programmes,paraphrase
+225,accounting degree,en,139,Academic Programmes,keyword
+226,what if i leave before finishing bachelor,en,140,Academic Programmes,paraphrase
+227,when are finals,en,141,Examinations,abbreviation
+228,موعد الامتحانات النهائية,ar,141,Examinations,keyword
+229,exam schedule,en,142,Examinations,synonym
+230,جدول الامتحانات,ar,142,Examinations,keyword
+231,things to take to the exam,en,143,Examinations,paraphrase
+232,i came late to my exam,en,144,Examinations,paraphrase
+233,التأخر عن الامتحان,ar,144,Examinations,keyword
+234,i was ill and missed the final,en,145,Examinations,synonym
+235,غبت عن الامتحان بسبب المرض,ar,145,Examinations,paraphrase
+236,how to submit mitigating circumstances,en,146,Examinations,synonym
+237,what mark do i need to pass,en,147,Examinations,paraphrase
+238,درجة النجاح,ar,147,Examinations,keyword
+239,results release date,en,148,Examinations,reorder
+240,متى تطلع النتائج,ar,148,Examinations,colloquial
+241,i want my exam remarked,en,149,Examinations,synonym
+242,اعادة تصحيح الامتحان,ar,149,Examinations,synonym
+243,what is a re-sit,en,150,Examinations,misspelling
+244,امتحان الاعادة,ar,150,Examinations,keyword
+245,resit exam dates,en,151,Examinations,keyword
+246,is the resit grade capped,en,152,Examinations,synonym
+247,i failed the same course 2 times,en,153,Examinations,paraphrase
+248,are phones allowed in exams,en,154,Examinations,paraphrase
+249,هل يسمح بالجوال في الامتحان,ar,154,Examinations,colloquial
+250,calculator allowed in exam,en,155,Examinations,reorder
+251,punishment for cheating,en,156,Examinations,synonym
+252,عقوبة الغش,ar,156,Examinations,keyword
+253,barred from final exam because of absence,en,157,Examinations,synonym
+254,الحرمان من الامتحان,ar,157,Examinations,keyword
+255,how much is coursework worth,en,158,Examinations,paraphrase
+256,see my exam script,en,159,Examinations,synonym
+257,grade scale A B C,en,160,Examinations,keyword
+258,نظام الدرجات,ar,160,Examinations,synonym
+259,where to upload assignments,en,161,Examinations,synonym
+260,penalty for late assignment,en,162,Examinations,reorder
+261,تسليم الواجب متاخر,ar,162,Examinations,paraphrase
+262,need more time for my assignment,en,163,Examinations,paraphrase
+263,midterm exams,en,164,Examinations,keyword
+264,two finals at the same time,en,165,Examinations,paraphrase
+265,extra time in exams for disabled students,en,166,Examinations,paraphrase
+266,check my marks online,en,167,Examinations,synonym
+267,what does grade I mean,en,168,Examinations,abbreviation
+268,oral exam viva,en,169,Examinations,keyword
+269,exam times in ramadan,en,170,Examinations,reorder
+270,foundation exit test,en,171,Examinations,synonym
+271,how is the graduation project graded,en,172,Examinations,synonym
+272,retake a course to raise my grade,en,173,Examinations,paraphrase
+273,تحسين المعدل باعادة المقرر,ar,173,Examinations,paraphrase
+274,where do i sit in the exam,en,174,Examinations,paraphrase
+275,exam postponed due to cyclone,en,175,Examinations,synonym
+276,do you have student housing,en,176,Student Services,synonym
+277,هل يوجد سكن للطلاب,ar,176,Student Services,paraphrase
+278,is there hostal,en,176,Student Services,misspelling
+279,how to book a hostel room,en,177,Student Services,synonym
+280,التقديم على السكن,ar,177,Student Services,keyword
+281,is there transportation to college,en,178,Student Services,paraphrase
+282,هل توجد باصات,ar,178,Student Services,colloquial
+283,bus timings,en,179,Student Services,keyword
+284,مواعيد الحافلات,ar,179,Student Services,keyword
+285,when does the library open,en,180,Student Services,paraphrase
+286,دوام المكتبة,ar,180,Student Services,colloquial
+287,wifi password campus,en,181,Student Services,keyword
+288,انترنت مجاني,ar,181,Student Services,keyword
+289,i need someone to talk to about stress,en,182,Student Services,paraphrase
+290,الارشاد النفسي,ar,182,Student Services,keyword
+291,is there a doctor on campus,en,183,Student Services,synonym
+292,العيادة,ar,183,Student Services,keyword
+293,how to join a club,en,184,Student Services,paraphrase
+294,الاندية الطلابية,ar,184,Student Services,keyword
+295,help finding a job after graduation,en,185,Student Services,paraphrase
+296,work part time in college,en,186,Student Services,reorder
+297,where can i eat on campus,en,187,Student Services,paraphrase
+298,الكافتيريا,ar,187,Student Services,keyword
+299,car parking for students,en,188,Student Services,keyword
+300,مواقف السيارات,ar,188,Student Services,keyword
+301,support for disabled students,en,189,Student Services,synonym
+302,i lost my wallet in college,en,190,Student Services,paraphrase
+303,how to complain,en,191,Student Services,paraphrase
+304,تقديم شكوى,ar,191,Student Services,keyword
+305,IT support contact,en,192,Student Services,abbreviation
+306,الدعم الفني,ar,192,Student Services,keyword
+307,is there a gym,en,193,Student Services,synonym
+308,student council elections,en,194,Student Services,keyword
+309,what should i wear to college,en,195,Student Services,paraphrase
+310,اللبس في الكلية,ar,195,Student Services,colloquial
+311,where can i pray,en,196,Student Services,paraphrase
+312,المصلى,ar,196,Student Services,keyword
+313,printing services,en,197,Student Services,keyword
+314,computer lab hours,en,198,Student Services,keyword
+315,alumni association,en,199,Student Services,keyword
+316,student visa help,en,200,Student Services,keyword
+317,girls hostel,en,201,Student Services,keyword
+318,medical insurance for students,en,202,Student Services,synonym
+319,student services working hours,en,203,Student Services,synonym
+320,emergency number on campus,en,204,Student Services,keyword
+321,رقم الطوارئ,ar,204,Student Services,keyword
+322,laptop loan from library,en,205,Student Services,synonym
+323,when is graduation day,en,206,Student Services,synonym
+324,حفل التخرج,ar,206,Student Services,keyword
+325,volunteer opportunities,en,207,Student Services,keyword
+326,help with writing essays,en,208,Student Services,paraphrase
+327,induction week for freshers,en,209,Student Services,synonym
+328,اسبوع التهيئة,ar,209,Student Services,keyword
+329,locker rental,en,210,Student Services,keyword
+330,what is the weather in muscat today,en,NONE,NONE,out_of_scope
+331,who won the football match yesterday,en,NONE,NONE,out_of_scope
+332,recommend a good restaurant in qurum,en,NONE,NONE,out_of_scope
+333,how do i renew my driving licence,en,NONE,NONE,out_of_scope
+334,what is the capital of france,en,NONE,NONE,out_of_scope
+335,tell me a joke,en,NONE,NONE,out_of_scope
+336,write python code to sort a list,en,NONE,NONE,out_of_scope
+337,how much is a flight to dubai,en,NONE,NONE,out_of_scope
+338,what is the exchange rate of omani rial to dollar,en,NONE,NONE,out_of_scope
+339,best phone to buy this year,en,NONE,NONE,out_of_scope
+340,how to cook majboos,en,NONE,NONE,out_of_scope
+341,what movies are showing in the cinema,en,NONE,NONE,out_of_scope
+342,who is the president of the united states,en,NONE,NONE,out_of_scope
+343,how do i open a bank account,en,NONE,NONE,out_of_scope
+344,translate hello to french,en,NONE,NONE,out_of_scope
+345,what time is sunset,en,NONE,NONE,out_of_scope
+346,hello how are you,en,NONE,NONE,out_of_scope
+347,can you book me a taxi,en,NONE,NONE,out_of_scope
+348,symptoms of flu,en,NONE,NONE,out_of_scope
+349,ما هو الطقس اليوم في مسقط,ar,NONE,NONE,out_of_scope
+350,من فاز في مباراة الأمس,ar,NONE,NONE,out_of_scope
+351,اقترح علي مطعماً جيداً,ar,NONE,NONE,out_of_scope
+352,كيف أجدد رخصة القيادة,ar,NONE,NONE,out_of_scope
+353,ما هي عاصمة فرنسا,ar,NONE,NONE,out_of_scope
+354,احكي لي نكتة,ar,NONE,NONE,out_of_scope
+355,كم سعر تذكرة الطيران إلى دبي,ar,NONE,NONE,out_of_scope
+356,كيف أطبخ المكبوس,ar,NONE,NONE,out_of_scope
+357,ما هو سعر صرف الريال مقابل الدولار,ar,NONE,NONE,out_of_scope
+358,أفضل هاتف للشراء,ar,NONE,NONE,out_of_scope
+359,مرحبا كيف حالك,ar,NONE,NONE,out_of_scope
+360,ما هي أعراض الإنفلونزا,ar,NONE,NONE,out_of_scope
+361,متى موعد غروب الشمس,ar,NONE,NONE,out_of_scope

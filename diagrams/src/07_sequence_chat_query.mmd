@@ -1,0 +1,38 @@
+sequenceDiagram
+  autonumber
+  actor S as Student
+  participant W as Chat widget (React)
+  participant N as Nginx
+  participant API as Flask /api/chat
+  participant E as HybridRetriever
+  participant DB as PostgreSQL
+  S->>W: Type question and press Send
+  W->>W: Show typing indicator
+  W->>N: POST /api/chat {message, session_id}
+  N->>API: proxy request
+  API->>API: Validate input, rate-limit check
+  API->>DB: SELECT faq_version (index up to date?)
+  API->>E: retrieve(message)
+  E->>E: detect_language, preprocess
+  E->>E: TF-IDF cosine similarity
+  alt TF-IDF score >= 0.75
+    E-->>API: FAQ id, confidence, method = tfidf
+  else below threshold
+    E->>E: SBERT embedding + score fusion
+    alt fused >= 0.35
+      E-->>API: FAQ id, confidence, method = sbert
+    else no match
+      E-->>API: category, method = fallback
+    end
+  end
+  API->>DB: SELECT faq (answer in query language)
+  API->>DB: INSERT conversation_logs
+  API-->>N: 200 JSON {answer, category, confidence, method, log_id}
+  N-->>W: response
+  W->>W: Render answer or fallback card, add to history
+  W-->>S: Display answer
+  opt Student rates the answer
+    S->>W: Thumbs up / down
+    W->>API: POST /api/feedback {log_id, helpful}
+    API->>DB: INSERT feedback
+  end

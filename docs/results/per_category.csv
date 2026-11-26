@@ -1,0 +1,36 @@
+method,category,n,accuracy
+Keyword match,Admissions,65,0.7538
+Keyword match,Registration,57,0.614
+Keyword match,Fees,51,0.7059
+Keyword match,Academic Programmes,53,0.5849
+Keyword match,Examinations,49,0.6122
+Keyword match,Student Services,54,0.5741
+Keyword match,NONE,32,0.625
+TF-IDF,Admissions,65,0.8
+TF-IDF,Registration,57,0.8596
+TF-IDF,Fees,51,0.8431
+TF-IDF,Academic Programmes,53,0.8491
+TF-IDF,Examinations,49,0.8571
+TF-IDF,Student Services,54,0.8333
+TF-IDF,NONE,32,0.5312
+SBERT,Admissions,65,0.7846
+SBERT,Registration,57,0.807
+SBERT,Fees,51,0.8039
+SBERT,Academic Programmes,53,0.566
+SBERT,Examinations,49,0.7755
+SBERT,Student Services,54,0.7963
+SBERT,NONE,32,0.9375
+Hybrid (spec: TF-IDF -> SBERT),Admissions,65,0.7846
+Hybrid (spec: TF-IDF -> SBERT),Registration,57,0.807
+Hybrid (spec: TF-IDF -> SBERT),Fees,51,0.8039
+Hybrid (spec: TF-IDF -> SBERT),Academic Programmes,53,0.5849
+Hybrid (spec: TF-IDF -> SBERT),Examinations,49,0.7755
+Hybrid (spec: TF-IDF -> SBERT),Student Services,54,0.7963
+Hybrid (spec: TF-IDF -> SBERT),NONE,32,0.9375
+Hybrid (final: TF-IDF -> SBERT+fusion),Admissions,65,0.8462
+Hybrid (final: TF-IDF -> SBERT+fusion),Registration,57,0.8947
+Hybrid (final: TF-IDF -> SBERT+fusion),Fees,51,0.8824
+Hybrid (final: TF-IDF -> SBERT+fusion),Academic Programmes,53,0.8491
+Hybrid (final: TF-IDF -> SBERT+fusion),Examinations,49,0.898
+Hybrid (final: TF-IDF -> SBERT+fusion),Student Services,54,0.8704
+Hybrid (final: TF-IDF -> SBERT+fusion),NONE,32,0.875

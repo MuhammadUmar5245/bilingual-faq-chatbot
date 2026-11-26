@@ -1,0 +1,9 @@
+variation,n,Keyword match,TF-IDF,SBERT,Hybrid (spec: TF-IDF -> SBERT),Hybrid (final: TF-IDF -> SBERT+fusion)
+abbreviation,18,0.7778,0.8889,0.5556,0.5556,0.8333
+colloquial,14,0.4286,0.8571,0.5,0.5,0.9286
+keyword,79,0.6709,0.8861,0.8101,0.8228,0.9241
+misspelling,12,0.3333,0.75,0.5,0.5,0.8333
+out_of_scope,32,0.625,0.5312,0.9375,0.9375,0.875
+paraphrase,110,0.5455,0.7455,0.7182,0.7182,0.7727
+reorder,12,0.8333,1.0,0.8333,0.8333,1.0
+synonym,84,0.7738,0.8929,0.869,0.869,0.9405

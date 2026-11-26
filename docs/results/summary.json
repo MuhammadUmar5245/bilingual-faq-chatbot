@@ -1,0 +1,274 @@
+{
+  "config": {
+    "keyword": {
+      "threshold": 0.26
+    },
+    "tfidf": {
+      "threshold": 0.19
+    },
+    "sbert": {
+      "threshold": 0.48
+    },
+    "hybrid_spec": {
+      "tfidf_threshold": 0.75,
+      "fusion_weight": 0.0,
+      "sbert_threshold": 0.48
+    },
+    "hybrid": {
+      "tfidf_threshold": 0.75,
+      "fusion_weight": 0.6,
+      "sbert_threshold": 0.35
+    }
+  },
+  "language_detection_accuracy": 1.0,
+  "language_detection_counts": {
+    "en": {
+      "correct": 244,
+      "n": 244
+    },
+    "ar": {
+      "correct": 117,
+      "n": 117
+    }
+  },
+  "category_classifier_accuracy": 0.8541033434650456,
+  "svm_held_out": {
+    "n": 164,
+    "correct": 145,
+    "accuracy": 0.8841463414634146,
+    "per_category": [
+      {
+        "category": "Admissions",
+        "n": 32,
+        "correct": 27,
+        "precision": 0.84375,
+        "recall": 0.84375,
+        "f1": 0.84375
+      },
+      {
+        "category": "Registration",
+        "n": 29,
+        "correct": 25,
+        "precision": 0.8928571428571429,
+        "recall": 0.8620689655172413,
+        "f1": 0.8771929824561403
+      },
+      {
+        "category": "Fees",
+        "n": 25,
+        "correct": 22,
+        "precision": 0.9565217391304348,
+        "recall": 0.88,
+        "f1": 0.9166666666666666
+      },
+      {
+        "category": "Academic Programmes",
+        "n": 27,
+        "correct": 25,
+        "precision": 0.8333333333333334,
+        "recall": 0.9259259259259259,
+        "f1": 0.8771929824561403
+      },
+      {
+        "category": "Examinations",
+        "n": 24,
+        "correct": 21,
+        "precision": 0.9130434782608695,
+        "recall": 0.875,
+        "f1": 0.8936170212765957
+      },
+      {
+        "category": "Student Services",
+        "n": 27,
+        "correct": 25,
+        "precision": 0.8928571428571429,
+        "recall": 0.9259259259259259,
+        "f1": 0.9090909090909091
+      }
+    ],
+    "per_language": {
+      "en": {
+        "n": 97,
+        "correct": 84
+      },
+      "ar": {
+        "n": 67,
+        "correct": 61
+      }
+    }
+  },
+  "tuning_sensitivity": [
+    {
+      "parameter": "tfidf_threshold",
+      "value": 0.65,
+      "accuracy": 0.8895027624309392,
+      "oos_rejection": 0.875,
+      "fallback_rate": 0.11049723756906077
+    },
+    {
+      "parameter": "tfidf_threshold",
+      "value": 0.7,
+      "accuracy": 0.8895027624309392,
+      "oos_rejection": 0.875,
+      "fallback_rate": 0.11049723756906077
+    },
+    {
+      "parameter": "tfidf_threshold",
+      "value": 0.75,
+      "accuracy": 0.8895027624309392,
+      "oos_rejection": 0.875,
+      "fallback_rate": 0.11049723756906077
+    },
+    {
+      "parameter": "tfidf_threshold",
+      "value": 0.8,
+      "accuracy": 0.8895027624309392,
+      "oos_rejection": 0.875,
+      "fallback_rate": 0.11049723756906077
+    },
+    {
+      "parameter": "tfidf_threshold",
+      "value": 0.85,
+      "accuracy": 0.8895027624309392,
+      "oos_rejection": 0.875,
+      "fallback_rate": 0.11049723756906077
+    },
+    {
+      "parameter": "fused_threshold",
+      "value": 0.25,
+      "accuracy": 0.8729281767955801,
+      "oos_rejection": 0.5625,
+      "fallback_rate": 0.049723756906077346
+    },
+    {
+      "parameter": "fused_threshold",
+      "value": 0.3,
+      "accuracy": 0.8784530386740331,
+      "oos_rejection": 0.75,
+      "fallback_rate": 0.08839779005524862
+    },
+    {
+      "parameter": "fused_threshold",
+      "value": 0.35,
+      "accuracy": 0.8895027624309392,
+      "oos_rejection": 0.875,
+      "fallback_rate": 0.11049723756906077
+    },
+    {
+      "parameter": "fused_threshold",
+      "value": 0.4,
+      "accuracy": 0.8453038674033149,
+      "oos_rejection": 0.9375,
+      "fallback_rate": 0.16574585635359115
+    },
+    {
+      "parameter": "fused_threshold",
+      "value": 0.45,
+      "accuracy": 0.7624309392265194,
+      "oos_rejection": 1.0,
+      "fallback_rate": 0.27624309392265195
+    },
+    {
+      "parameter": "tfidf_weight",
+      "value": 0.4,
+      "accuracy": 0.8674033149171271,
+      "oos_rejection": 0.8125,
+      "fallback_rate": 0.09944751381215469
+    },
+    {
+      "parameter": "tfidf_weight",
+      "value": 0.5,
+      "accuracy": 0.8784530386740331,
+      "oos_rejection": 0.8125,
+      "fallback_rate": 0.09944751381215469
+    },
+    {
+      "parameter": "tfidf_weight",
+      "value": 0.6,
+      "accuracy": 0.8895027624309392,
+      "oos_rejection": 0.875,
+      "fallback_rate": 0.11049723756906077
+    },
+    {
+      "parameter": "tfidf_weight",
+      "value": 0.7,
+      "accuracy": 0.856353591160221,
+      "oos_rejection": 0.9375,
+      "fallback_rate": 0.15469613259668508
+    },
+    {
+      "parameter": "tfidf_weight",
+      "value": 0.8,
+      "accuracy": 0.8176795580110497,
+      "oos_rejection": 0.9375,
+      "fallback_rate": 0.18232044198895028
+    }
+  ],
+  "margin_rule": [
+    {
+      "margin": 0.0,
+      "tuning_accuracy": 0.8895027624309392,
+      "tuning_wrong_answer_rate": 0.07734806629834254,
+      "tuning_fallback_rate": 0.11049723756906077,
+      "held_out_accuracy": 0.8555555555555555,
+      "held_out_wrong_answer_rate": 0.1,
+      "held_out_fallback_rate": 0.12222222222222222
+    },
+    {
+      "margin": 0.02,
+      "tuning_accuracy": 0.8895027624309392,
+      "tuning_wrong_answer_rate": 0.06077348066298342,
+      "tuning_fallback_rate": 0.13259668508287292,
+      "held_out_accuracy": 0.8388888888888889,
+      "held_out_wrong_answer_rate": 0.06111111111111111,
+      "held_out_fallback_rate": 0.17777777777777778
+    },
+    {
+      "margin": 0.04,
+      "tuning_accuracy": 0.8729281767955801,
+      "tuning_wrong_answer_rate": 0.04419889502762431,
+      "tuning_fallback_rate": 0.16574585635359115,
+      "held_out_accuracy": 0.8333333333333334,
+      "held_out_wrong_answer_rate": 0.05,
+      "held_out_fallback_rate": 0.19444444444444445
+    },
+    {
+      "margin": 0.06,
+      "tuning_accuracy": 0.8342541436464088,
+      "tuning_wrong_answer_rate": 0.04419889502762431,
+      "tuning_fallback_rate": 0.20441988950276244,
+      "held_out_accuracy": 0.8055555555555556,
+      "held_out_wrong_answer_rate": 0.044444444444444446,
+      "held_out_fallback_rate": 0.22777777777777777
+    },
+    {
+      "margin": 0.08,
+      "tuning_accuracy": 0.7900552486187845,
+      "tuning_wrong_answer_rate": 0.04419889502762431,
+      "tuning_fallback_rate": 0.24861878453038674,
+      "held_out_accuracy": 0.7777777777777778,
+      "held_out_wrong_answer_rate": 0.03888888888888889,
+      "held_out_fallback_rate": 0.2611111111111111
+    },
+    {
+      "margin": 0.1,
+      "tuning_accuracy": 0.7569060773480663,
+      "tuning_wrong_answer_rate": 0.03314917127071823,
+      "tuning_fallback_rate": 0.292817679558011,
+      "held_out_accuracy": 0.7611111111111111,
+      "held_out_wrong_answer_rate": 0.03333333333333333,
+      "held_out_fallback_rate": 0.2833333333333333
+    }
+  ],
+  "live_vs_simulated_mismatches": 0,
+  "hybrid_method_mix": {
+    "tfidf": 8,
+    "sbert": 311,
+    "fallback": 42
+  },
+  "hybrid_latency_ms": {
+    "mean": 16.650531301936482,
+    "p95": 23.15260000023045,
+    "max": 211.08430000003864
+  }
+}

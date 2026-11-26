@@ -1,0 +1,38 @@
+flowchart TB
+  STU["Student"]
+  ADM["Admin staff"]
+  P1(("1.0<br/>Receive and<br/>validate query"))
+  P2(("2.0<br/>Detect language<br/>and preprocess"))
+  P3(("3.0<br/>Retrieve answer<br/>TF-IDF, SBERT"))
+  P4(("4.0<br/>Compose response<br/>or fallback"))
+  P5(("5.0<br/>Log query<br/>and feedback"))
+  P6(("6.0<br/>Authenticate<br/>staff"))
+  P7(("7.0<br/>Manage FAQs<br/>and settings"))
+  P8(("8.0<br/>Report statistics<br/>and logs"))
+  D1[("D1 FAQs and categories")]
+  D2[("D2 Settings")]
+  D3[("D3 Conversation logs")]
+  D4[("D4 Feedback")]
+  D5[("D5 Admin users")]
+  STU -- question --> P1
+  P1 -- valid query --> P2
+  P2 -- "tokens, language" --> P3
+  D1 -- active FAQs --> P3
+  D2 -- thresholds --> P3
+  P3 -- "FAQ id, confidence, method" --> P4
+  D1 -- answer text --> P4
+  D2 -- contact details --> P4
+  P4 -- answer --> STU
+  P4 -- log record --> P5
+  STU -- feedback --> P5
+  P5 --> D3
+  P5 --> D4
+  ADM -- credentials --> P6
+  D5 -- password hash --> P6
+  P6 -- session --> P7
+  ADM -- "FAQ edits, CSV, settings" --> P7
+  P7 --> D1
+  P7 --> D2
+  D3 --> P8
+  D4 --> P8
+  P8 -- "stats, logs, unanswered" --> ADM

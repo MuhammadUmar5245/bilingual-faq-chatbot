@@ -1,0 +1,93 @@
+classDiagram
+  direction LR
+  class HybridRetriever {
+    +float tfidf_threshold
+    +float sbert_threshold
+    +float fusion_weight
+    +bool use_sbert
+    +fit(faqs) HybridRetriever
+    +retrieve(query) RetrievalResult
+  }
+  class TfidfRetriever {
+    +float word_weight
+    +float char_weight
+    +fit(faqs) TfidfRetriever
+    +scores(query) ndarray
+    +search(query, top_k) list
+  }
+  class SbertRetriever {
+    +str model_name
+    +ndarray embeddings
+    +fit(faqs) SbertRetriever
+    +encode(texts) ndarray
+    +scores(query) ndarray
+  }
+  class CategoryClassifier {
+    +list labels
+    +fit(faqs) CategoryClassifier
+    +predict(query) str
+  }
+  class RetrievalResult {
+    +int faq_id
+    +float confidence
+    +str method
+    +str lang
+    +str category
+    +float elapsed_ms
+    +list alternatives
+  }
+  class FaqDoc {
+    +int id
+    +str question_en
+    +str question_ar
+    +str keywords
+    +str category
+  }
+  class Category {
+    +int id
+    +str name_en
+    +str name_ar
+  }
+  class FAQ {
+    +int id
+    +str question_en
+    +str question_ar
+    +str answer
+    +str answer_ar
+    +bool is_active
+    +to_dict() dict
+  }
+  class ConversationLog {
+    +str session_id
+    +str query_text
+    +str detected_lang
+    +float confidence
+    +str method
+    +float response_ms
+    +to_dict() dict
+  }
+  class Feedback {
+    +int log_id
+    +bool helpful
+  }
+  class AdminUser {
+    +str username
+    -str password_hash
+    +set_password(pw)
+    +check_password(pw) bool
+  }
+  class Setting {
+    +str key
+    +str value
+    +get(key)$
+    +set(key, value)$
+  }
+  HybridRetriever *-- TfidfRetriever
+  HybridRetriever *-- SbertRetriever
+  HybridRetriever *-- CategoryClassifier
+  HybridRetriever ..> RetrievalResult : creates
+  HybridRetriever o-- FaqDoc
+  FAQ ..> FaqDoc : mapped to
+  Category "1" -- "*" FAQ
+  FAQ "0..1" -- "*" ConversationLog
+  ConversationLog "1" -- "*" Feedback

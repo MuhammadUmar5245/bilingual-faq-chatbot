@@ -1,0 +1,21 @@
+method,language,split,n,accuracy
+Keyword match,en,held-out,107,0.6916
+Keyword match,en,full,244,0.6639
+Keyword match,ar,held-out,73,0.5616
+Keyword match,ar,full,117,0.5983
+TF-IDF,en,held-out,107,0.7944
+TF-IDF,en,full,244,0.8074
+TF-IDF,ar,held-out,73,0.8356
+TF-IDF,ar,full,117,0.8205
+SBERT,en,held-out,107,0.8131
+SBERT,en,full,244,0.7828
+SBERT,ar,held-out,73,0.7397
+SBERT,ar,full,117,0.7521
+Hybrid (spec: TF-IDF -> SBERT),en,held-out,107,0.8131
+Hybrid (spec: TF-IDF -> SBERT),en,full,244,0.7828
+Hybrid (spec: TF-IDF -> SBERT),ar,held-out,73,0.7534
+Hybrid (spec: TF-IDF -> SBERT),ar,full,117,0.7607
+Hybrid (final: TF-IDF -> SBERT+fusion),en,held-out,107,0.8318
+Hybrid (final: TF-IDF -> SBERT+fusion),en,full,244,0.8648
+Hybrid (final: TF-IDF -> SBERT+fusion),ar,held-out,73,0.8904
+Hybrid (final: TF-IDF -> SBERT+fusion),ar,full,117,0.8889

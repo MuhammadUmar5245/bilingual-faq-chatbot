@@ -1,0 +1,33 @@
+{
+  "stats": {
+    "requests": 6031,
+    "successful": 6031,
+    "errors": 0,
+    "mean": 499.0602885093682,
+    "median": 442.5,
+    "p90": 504.9,
+    "p95": 528.6500000000001,
+    "p99": 604.91,
+    "max": 8257.5,
+    "min": 134.8,
+    "throughput": 99.92047450213725,
+    "duration": 60.358
+  },
+  "window": {
+    "edit_s": 30.004,
+    "edit_api_ms": 1230.1,
+    "window_s": 10.0,
+    "before_n": 3448,
+    "before_p95": 517.3,
+    "before_p99": 555.2239999999998,
+    "before_max": 626.6,
+    "window_n": 280,
+    "window_p95": 8057.885,
+    "window_max": 8257.5,
+    "delayed": 56,
+    "delayed_max": 8257.5
+  },
+  "status_codes": {
+    "200": 6031
+  }
+}
